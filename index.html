@@ -1,0 +1,1561 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>CGA 認知評估異常的後續處置與建議</title>
+<link rel="stylesheet" href="fonts.css?v=5bea1193">
+<link rel="stylesheet" href="deck.css?v=1a39706c">
+<style id="k-neuro">
+/* 神經系統藥理治療學 2026：本案專用樣式（k- 前綴；顏色只寫 hex；組裝時 inline 進 index.html） */
+:root{--ep:#5B3FA0;--ep-wash:#EFEBF8;--st:#C2410C;--st-wash:#FCEDE4;--ha:#B45309;--ha-wash:#FDF3E3;
+  --dm:#0F4C5C;--dm-wash:#E3F0F2;--pd:#2E8B74;--pd-wash:#E5F4EF;--mech:#1F6FB2;--mech-wash:#E6F0FA}
+
+/* 封面：純排版，不放插畫 */
+.k-slide.k-ncover{padding:0;display:none;flex-direction:row}
+.k-slide.k-ncover.is-active{display:flex}
+.k-ncover .k-nc-l{flex:0 0 1180px;padding:150px 0 0 120px;display:flex;flex-direction:column}
+.k-ncover .k-nc-kick{margin:0;font-size:30px;font-weight:900;letter-spacing:.12em;color:#1F6FB2}
+.k-ncover h1{margin:22px 0 0;font-family:"Noto Serif TC",serif;font-size:104px;line-height:1.12;font-weight:900;color:#1E2833}
+.k-ncover .k-nc-sub{margin:30px 0 0;font-size:38px;line-height:1.5;color:#3B4754;max-width:980px}
+.k-ncover .k-nc-meta{margin-top:auto;padding-bottom:130px}
+.k-ncover .k-nc-meta p{margin:0;font-size:30px;line-height:1.6;color:#3B4754}
+.k-ncover .k-nc-meta p.k-who{font-size:38px;font-weight:900;color:#1E2833}
+.k-ncover .k-nc-r{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:90px 110px 120px 30px;height:1028px;box-sizing:border-box}
+.k-ncover .k-nc-l{height:1028px;box-sizing:border-box}
+/* ?all=1（截圖、QA、PDF）只顯示預設分頁；替代分頁由 PPTX 狀態頁與主講切換呈現 */
+.k-slide[data-step="all"] .k-alt{display:none}
+.k-nc-dz{display:flex;align-items:center;gap:22px;padding:22px 30px;border-radius:18px;background:#FFFFFF;border:3px solid #E3E6E9}
+.k-nc-dz b{flex:0 0 auto;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:30px;font-weight:900;color:#FFFFFF}
+.k-nc-dz span{font-size:34px;font-weight:900;color:#1E2833}
+.k-nc-dz small{display:block;font-size:24px;font-weight:700;color:#5F6B77;margin-top:4px}
+
+/* 機轉圖：突觸卡片（原生 HTML，轉 PPTX 可編輯） */
+.k-syn{display:flex;flex-direction:column;gap:10px}
+.k-tg .k-tg-drug{font-size:24px}
+.k-syn-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.k-syn-band{display:flex;align-items:center;gap:14px;font-size:24px;font-weight:900;color:#5F6B77}
+.k-syn-band::after{content:"";flex:1 1 auto;height:3px;background:#E3E6E9}
+.k-tg{position:relative;border-radius:16px;padding:12px 16px 12px 70px;background:#FFFFFF;border:3px solid #E3E6E9}
+.k-tg i{position:absolute;left:16px;top:16px;width:44px;height:44px;border-radius:50%;font-style:normal;
+  display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#FFFFFF;background:#5B3FA0}
+.k-tg h4{margin:0;font-size:30px;line-height:1.2;font-weight:900;color:#1E2833}
+.k-tg .k-tg-what{margin:4px 0 0;font-size:24px;color:#5F6B77}
+.k-tg .k-tg-drug{margin:8px 0 0;font-size:25px;font-weight:700;line-height:1.35;color:#5B3FA0}
+.k-tg.k-blk{border-color:#C2410C}.k-tg.k-blk i{background:#C2410C}
+.k-tg.k-enh{border-color:#3F7A55}.k-tg.k-enh i{background:#3F7A55}
+.k-syn-rel{display:flex;align-items:center;justify-content:center;gap:16px;height:54px;border-radius:12px;background:#EFEBF8;
+  font-size:26px;font-weight:900;color:#5B3FA0;overflow:hidden;position:relative}
+.k-syn-rel .k-dot{width:14px;height:14px;border-radius:50%;background:#5B3FA0;opacity:.75}
+.k-syn-key{display:flex;gap:26px;font-size:24px;color:#3B4754;align-items:center}
+.k-syn-key span{display:flex;align-items:center;gap:8px}
+.k-syn-key em{display:inline-block;width:22px;height:22px;border-radius:6px;font-style:normal}
+.k-multi{border-radius:14px;padding:14px 22px;background:#F0F2F4;font-size:26px;line-height:1.4;color:#1E2833}
+.k-multi b{color:#5B3FA0}
+
+/* 原文圖框 */
+.k-lit{display:flex;flex-direction:column;gap:10px;min-height:0;height:100%}
+.k-lit .k-litbox{position:relative;flex:1 1 auto;min-height:0;border:2px solid #E3E6E9;border-radius:12px;background:#FFFFFF}
+.k-lit .k-litbox img{position:absolute;inset:10px;width:calc(100% - 20px);height:calc(100% - 20px);object-fit:contain}
+.k-lit .k-litcap{margin:0;font-size:22px;line-height:1.4;color:#5F6B77}
+.k-lit .k-litcap b{color:#1E2833}
+.k-badge{display:inline-block;padding:2px 12px;border-radius:999px;font-size:20px;font-weight:900;color:#FFFFFF;background:#3F7A55;vertical-align:2px}
+.k-badge.k-cr{background:#B5482F}
+
+/* 數字卡 */
+.k-kpis{display:flex;flex-direction:column;gap:16px}
+.k-kpi{border-radius:16px;padding:16px 24px;background:#F0F2F4}
+.k-kpi .k-kl{margin:0;font-size:24px;font-weight:900;color:#5F6B77}
+.k-kpi .k-kv{margin:2px 0 0;font-family:"Noto Serif TC",serif;font-size:50px;line-height:1.15;font-weight:900;color:#1E2833}
+.k-kpi .k-kv small{font-family:"Noto Sans TC",sans-serif;font-size:26px;font-weight:700;color:#3B4754}
+.k-kpi .k-kd{margin:4px 0 0;font-size:25px;line-height:1.35;color:#3B4754}
+.k-kpi.k-good{background:#E9F3EC}.k-kpi.k-good .k-kv{color:#3F7A55}
+.k-kpi.k-neu{background:#E8EFF7}.k-kpi.k-neu .k-kv{color:#24476E}
+.k-news{display:flex;gap:18px;align-items:stretch;border-radius:16px;padding:14px;background:#FDF6DD}
+.k-news img{flex:0 0 330px;width:330px;height:224px;object-fit:cover;object-position:top;border:2px solid #E3E6E9;border-radius:8px;background:#FFFFFF}
+.k-news div{font-size:24px;line-height:1.4;color:#1E2833}
+.k-news b{display:block;font-size:26px;margin-bottom:4px}
+
+/* 比較表（抗類澱粉） */
+table.k-cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:25px}
+table.k-cmp th{padding:10px 18px;font-size:27px;font-weight:900;text-align:left;color:#FFFFFF}
+table.k-cmp th.k-lec{background:#3F7A55;border-radius:12px 0 0 0}
+table.k-cmp th.k-don{background:#B5482F;border-radius:0 12px 0 0}
+table.k-cmp th.k-rowh{background:#FFFFFF;color:#5F6B77;width:220px}
+table.k-cmp td{padding:12px 18px;border-bottom:2px solid #F0F2F4;line-height:1.35;vertical-align:top}
+table.k-cmp td.k-rh{font-weight:900;color:#1E2833;white-space:nowrap}
+table.k-cmp td b{font-family:"Noto Serif TC",serif;font-size:30px;color:#1E2833}
+
+/* CGRP 機轉：三段式訊號鏈＋五個阻斷點 */
+.k-cg{display:grid;grid-template-columns:1fr 70px 1fr 70px 1fr;align-items:center;gap:0}
+.k-cg-node{border-radius:18px;padding:20px 22px;background:#FFFFFF;border:3px solid #E3E6E9;min-height:190px;
+  display:flex;flex-direction:column;gap:8px;position:relative}
+.k-cg-node h4{margin:0;font-size:32px;font-weight:900;color:#1E2833}
+.k-cg-node p{margin:0;font-size:25px;line-height:1.4;color:#3B4754}
+.k-cg-arr{height:6px;background:#B45309;position:relative;margin-right:14px}
+.k-cg-arr::after{content:"";position:absolute;right:-22px;top:-11px;border:14px solid transparent;border-left:20px solid #B45309}
+.k-cg-arr .k-pulse{position:absolute;top:-4px;left:0;width:14px;height:14px;border-radius:50%;background:#B45309}
+.k-pin{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;
+  font-size:24px;font-weight:900;color:#B45309;background:#FFFFFF;border:3px solid #B45309}
+.k-cg-pins{display:flex;gap:8px;flex-wrap:wrap}
+.k-blocks{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:22px}
+.k-blk5{border-radius:16px;padding:14px 16px;background:#FDF3E3;border:3px solid transparent;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.k-blk5 .k-use{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:22px;color:#5F6B77}
+.k-u{display:inline-block;padding:2px 10px;border-radius:999px;font-size:21px;font-weight:900;color:#FFFFFF}
+.k-u.k-ua{background:#B5482F}.k-u.k-up{background:#24476E}.k-u.k-ux{background:#5F6B77}
+.k-blocks{align-items:stretch}
+.k-blk5 .k-pin{width:40px;height:40px;font-size:22px}
+.k-blk5 h5{margin:8px 0 2px;font-size:26px;font-weight:900;color:#1E2833}
+.k-blk5 p{margin:0;font-size:23px;line-height:1.35;color:#3B4754}
+.k-slide[data-step="1"] .k-blk5.k-b1,.k-slide[data-step="2"] .k-blk5.k-b2,.k-slide[data-step="3"] .k-blk5.k-b3,
+.k-slide[data-step="4"] .k-blk5.k-b4,.k-slide[data-step="5"] .k-blk5.k-b5{border-color:#B45309;background:#FFFFFF}
+.k-slide[data-step="1"] .k-cg .k-p1,.k-slide[data-step="2"] .k-cg .k-p2,.k-slide[data-step="3"] .k-cg .k-p3,
+.k-slide[data-step="4"] .k-cg .k-p4,.k-slide[data-step="5"] .k-cg .k-p5{background:#B45309;color:#FFFFFF}
+
+/* 章節頁：左側章名＋重點，右側生圖（圖中無字） */
+.k-slide.k-chap{padding:0;display:none;flex-direction:row}
+.k-slide.k-chap.is-active{display:flex}
+.k-chap .k-ch-l{flex:0 0 900px;height:1028px;box-sizing:border-box;padding:120px 40px 80px 110px;display:flex;flex-direction:column}
+.k-chap .k-ch-no{margin:0;font-family:"Noto Serif TC",serif;font-size:120px;font-weight:900;line-height:1}
+.k-chap h2{margin:10px 0 0;font-family:"Noto Serif TC",serif;font-size:84px;font-weight:900;color:#1E2833}
+.k-chap .k-ch-en{margin:6px 0 30px;font-size:30px;font-weight:700;color:#5F6B77;letter-spacing:.06em}
+.k-chap ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px}
+.k-chap li{display:flex;gap:16px;align-items:baseline;font-size:30px;line-height:1.35;color:#1E2833}
+.k-chap li b{flex:0 0 auto;width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:24px;color:#FFFFFF}
+.k-chap .k-ch-r{flex:1 1 auto;height:1028px;position:relative}
+.k-chap .k-ch-r img{position:absolute;inset:60px 60px 60px 0;width:calc(100% - 60px);height:calc(100% - 120px);object-fit:contain}
+/* 長條圖（原生 HTML，PPTX 可編輯） */
+.k-hb{display:flex;flex-direction:column;gap:10px}
+.k-hb .k-hr{display:grid;grid-template-columns:var(--lab,300px) 1fr 110px;align-items:center;gap:14px}
+.k-hb .k-hl{font-size:24px;font-weight:700;text-align:right;color:#1E2833}
+.k-hb .k-ht{height:34px;background:#F0F2F4;border-radius:6px;overflow:hidden}
+.k-hb .k-hf{height:100%;border-radius:6px;background:#24476E}
+.k-hb .k-hv{font-family:"Noto Serif TC",serif;font-size:30px;font-weight:900;color:#1E2833}
+.k-figimg{position:relative;flex:1 1 auto;min-height:0}
+.k-figimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.k-gencap{margin:6px 0 0;font-size:20px;color:#5F6B77}
+.k-take{margin-top:18px;border-radius:14px;padding:14px 24px;background:#1E2833;color:#FFFFFF;font-size:28px;font-weight:900;line-height:1.4}
+.k-chip{display:inline-block;padding:4px 16px;border-radius:999px;font-size:22px;font-weight:900;color:#FFFFFF;margin-right:10px;vertical-align:4px}
+
+/* 動態展示（只動 transform／opacity；html-deck-pro interaction.md 規範） */
+@keyframes k-flowdot{0%{transform:translateX(-140px);opacity:0}20%{opacity:.8}80%{opacity:.8}100%{transform:translateX(140px);opacity:0}}
+@keyframes k-pulse{0%{transform:translateX(0);opacity:0}15%{opacity:1}100%{transform:translateX(60px);opacity:0}}
+.k-slide.is-active .k-syn-rel .k-dot{animation:k-flowdot 2.4s var(--k-out) infinite}
+.k-slide.is-active .k-syn-rel .k-dot:nth-child(2){animation-delay:.8s}
+.k-slide.is-active .k-syn-rel .k-dot:nth-child(3){animation-delay:1.6s}
+.k-syn-rel .k-dots{position:absolute;left:50%;top:50%;width:0;height:0}
+.k-syn-rel .k-dots .k-dot{position:absolute;left:-7px;top:-7px}
+.k-syn-rel .k-rl{position:relative;z-index:1;padding:0 18px;background:#EFEBF8}
+.k-slide.is-active .k-cg-arr .k-pulse{animation:k-pulse 1.6s linear infinite}
+@media (prefers-reduced-motion:reduce){
+  .k-slide.is-active .k-syn-rel .k-dot,.k-slide.is-active .k-cg-arr .k-pulse{animation:none}
+}
+@media print{.k-syn-rel .k-dot,.k-cg-arr .k-pulse{animation:none!important}}
+
+.k-res{margin-top:18px;border-radius:14px;padding:12px 24px;background:#B45309;color:#FFFFFF;font-size:28px;font-weight:900;line-height:1.4}
+
+/* 2026-11-02 全份共用調整：副標橫跨全寬（膠囊只在標題那一列）；學術版字級加大以減少留白 */
+.k-head .k-sub{margin-right:calc(-1 * var(--navw,480px))}
+.k-card h3{font-size:32px}
+.k-card p{font-size:27px;line-height:1.45}
+.k-step h3{font-size:33px}
+.k-step p{font-size:27px;line-height:1.45}
+.k-warn p{font-size:28px}
+.k-body .k-take{font-size:30px}
+/* 案例題、表格、長條圖加大（學術版留白審查 2026-11-02） */
+.k-opts{gap:20px}
+.k-opt{padding:24px 28px}
+.k-opt .k-say{font-size:33px}
+.k-opt .k-fb{font-size:28px}
+table.k-table{font-size:28px}
+table.k-table td{padding:16px 20px}
+table.k-table td.k-item{font-size:29px}
+.k-hb{gap:16px}
+.k-hb .k-ht{height:46px}
+.k-hb .k-hl{font-size:27px}
+.k-hb .k-hv{font-size:34px}
+.k-evi p{font-size:28px}
+.k-hb.k-tight{gap:10px}.k-hb.k-tight .k-ht{height:36px}
+.k-evi.k-evcol{flex-direction:column;align-items:flex-start;gap:6px}
+/* 帕金森治療窗示意（原生 HTML 色帶） */
+.k-pdwin{display:flex;flex-direction:column;height:300px;border-radius:14px;overflow:hidden;border:2px solid #E3E6E9}
+.k-pdz{display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900}
+.k-pdz-dys{background:#FBEDE8;color:#B5482F}
+.k-pdz-on{background:#2E8B74;color:#FFFFFF}
+.k-pdz-off{background:#F0F2F4;color:#5F6B77}
+
+/* 2026-11-02 留白審查第二輪：再放大主要元件；剩餘空間讓內容均勻分布（不再全擠在上半部） */
+.k-body{justify-content:space-evenly}
+table.k-table{font-size:30px}
+table.k-table td{padding:20px 22px}
+table.k-table td.k-item{font-size:30px}
+table.k-table th{font-size:25px}
+table.k-cmp{font-size:28px}
+table.k-cmp td{padding:16px 20px}
+.k-card h3{font-size:34px}
+.k-card p{font-size:29px}
+.k-step h3{font-size:34px}
+.k-step p{font-size:28px}
+.k-tg h4{font-size:32px}
+.k-tg .k-tg-what{font-size:26px}
+.k-tg .k-tg-drug{font-size:26px}
+.k-cg-node h4{font-size:34px}
+.k-cg-node p{font-size:27px}
+.k-hb .k-ht{height:54px}
+.k-hb{gap:18px}
+.k-hb .k-hl{font-size:28px}
+.k-hb .k-hv{font-size:36px}
+.k-body .k-take{font-size:32px;padding:18px 26px}
+.k-evi .k-big2{font-size:64px}
+.k-warn p{font-size:30px}
+.k-hb.k-tight .k-ht{height:38px}.k-hb.k-tight{gap:8px}.k-hb.k-tight .k-hv{font-size:30px}.k-hb.k-tight .k-hl{font-size:25px}
+
+/* CGA 專用元件 */
+.k-opts.k-opts2{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:none}
+.k-opts2 .k-opt{font-size:29px;line-height:1.35;align-items:flex-start;min-height:190px}
+.k-opts2 .k-fb{font-size:26px;line-height:1.35}
+.k-split2{display:grid;grid-template-columns:1fr 1fr;gap:28px;flex:1 1 auto;min-height:0}
+.k-split2.k-s64{grid-template-columns:1.5fr 1fr}
+.k-zones{display:flex;flex-direction:column;gap:14px}
+.k-zone{flex:1 1 0;border-radius:16px;padding:14px 26px;border-left:12px solid #5F6B77;background:#F0F2F4}
+.k-zone p{margin:0}
+.k-zl{font-size:27px;font-weight:900;color:#3B4754}
+.k-zv{font-family:"Noto Serif TC",serif;font-size:48px;line-height:1.2;font-weight:900;color:#1E2833}
+.k-zd{font-size:26px;line-height:1.35;color:#3B4754}
+.k-zneg{background:#E9F3EC;border-left-color:#3F7A55}.k-zneg .k-zv{color:#3F7A55}
+.k-zmid{background:#FDF3E3;border-left-color:#B45309}.k-zmid .k-zv{color:#B45309}
+.k-zpos{background:#FBEDE8;border-left-color:#B5482F}.k-zpos .k-zv{color:#B5482F}
+.k-pt{display:flex;flex-direction:column;gap:26px;margin-top:22px}
+.k-ptbar{display:flex;height:120px;border-radius:14px;overflow:hidden}
+.k-ptbar span{display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:900;color:#FFFFFF;white-space:nowrap}
+.k-tp{background:#3F7A55}.k-fp{background:#B5482F}
+.k-ptnum{display:grid;grid-template-columns:300px 300px 1fr;gap:26px;align-items:center}
+.k-ptnum div{border-radius:16px;padding:16px 22px;background:#F0F2F4}
+.k-ptnum b{display:block;font-family:"Noto Serif TC",serif;font-size:62px;line-height:1.15;color:#1E2833}
+.k-ptnum span{font-size:25px;font-weight:700;color:#3B4754}
+.k-ptnum p{margin:0;font-size:32px;line-height:1.4;font-weight:700;color:#1E2833}
+.k-split2.k-s64{grid-template-columns:1.62fr 1fr;gap:22px}
+.k-s64 table.k-cmp td{padding:7px 14px;line-height:1.28}
+.k-s64 table.k-cmp th{padding:7px 14px}
+.k-s64 table.k-cmp td b{font-size:27px}
+.k-col1{min-width:0;display:flex;flex-direction:column;gap:14px}
+.k-split2:has(> :only-child){grid-template-columns:1fr}
+.k-stack1{display:flex;flex-direction:column;gap:18px}
+.k-g5c{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.k-hbars{display:flex;flex-direction:column;gap:20px;justify-content:center;flex:1 1 auto}
+.k-hbr{display:grid;grid-template-columns:330px 1fr 160px;gap:16px;align-items:center}
+.k-hbl{font-size:27px;font-weight:700;color:#1E2833;line-height:1.25}
+.k-hbt{display:block;height:44px;border-radius:10px;background:#F0F2F4;overflow:hidden}
+.k-hbf{display:block;height:44px;border-radius:10px}
+.k-hbv{font-family:"Noto Serif TC",serif;font-size:36px;font-weight:900;color:#1E2833;white-space:nowrap}
+.k-ad8{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.k-ad8 p{margin:0;display:flex;gap:12px;align-items:center;padding:12px 16px;border-radius:12px;background:#F0F2F4;font-size:26px;line-height:1.3;color:#3B4754}
+.k-ad8 p b{flex:0 0 40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#FFFFFF;color:#5F6B77;font-size:23px}
+.k-ad8 p.k-on{background:#1F6FB2;color:#FFFFFF;font-weight:700}
+.k-ad8 p.k-on b{color:#1F6FB2}
+.k-tiers{display:flex;flex-direction:column;gap:16px;align-items:center}
+.k-tier{display:flex;gap:24px;align-items:center;border-radius:16px;padding:18px 30px;color:#FFFFFF}
+.k-tier b{font-family:"Noto Serif TC",serif;font-size:58px;line-height:1}
+.k-tier h3{margin:0;font-size:34px;font-weight:900}
+.k-tier p{margin:4px 0 0;font-size:27px;line-height:1.3}
+.k-t3{width:68%;background:#5B3FA0}.k-t2{width:84%;background:#1F6FB2}.k-t1{width:100%;background:#24476E}
+.k-flow2{display:flex;flex-direction:column;gap:14px}
+.k-flow2 p{margin:0;padding:16px 24px;border-radius:14px;background:#E8EFF7;font-size:29px;font-weight:700;line-height:1.3;color:#1E2833;border-left:10px solid #1F6FB2}
+.k-kpi.k-warn2{background:#FBEDE8}.k-kpi.k-warn2 .k-kv{color:#B5482F}
+.k-refs{column-count:3;column-gap:30px}
+.k-refs p{margin:0 0 5px;font-size:20px;line-height:1.3;color:#3B4754;break-inside:avoid}
+.k-gencap{position:absolute;right:66px;bottom:60px;margin:0;font-size:20px;color:#5F6B77}
+.k-g4 .k-card .k-no{font-size:34px}
+/* 全份放大與填滿 */
+.k-nav{max-width:440px}
+.k-nav button{white-space:nowrap}
+.k-body>.k-g2,.k-body>.k-g3,.k-body>.k-g4,.k-body>.k-g5c,.k-body>.k-split2,.k-body>.k-hbars,.k-body>.k-tiers{flex:1 1 auto;min-height:0}
+.k-card{display:flex;flex-direction:column;justify-content:center}
+.k-card h3{font-size:34px}
+.k-card p{font-size:29px;line-height:1.38}
+.k-card .k-no{font-size:44px}
+.k-g4 .k-card h3,.k-g5c .k-card h3{font-size:31px}
+.k-g4 .k-card p,.k-g5c .k-card p{font-size:27px}
+.k-col1 .k-card h3{font-size:30px}
+.k-col1 .k-card p{font-size:26px}
+.k-split2>.k-g2 .k-card h3,.k-split2 .k-g2 .k-card h3{font-size:29px}
+.k-split2 .k-g2 .k-card p{font-size:25px}
+.k-col1 .k-g2,.k-col1 .k-g3,.k-col1 .k-g1,.k-col1 .k-hbars{flex:1 1 auto}
+.k-split2>.k-kpis{justify-content:center}
+.k-body>table.k-table{flex:1 1 auto}
+table.k-table td{font-size:29px}
+table.k-table td.k-item{font-size:30px}
+.k-s64 table.k-table td{font-size:26px;padding:12px 14px}
+.k-col1 table.k-table td{font-size:26px;padding:12px 14px}
+.k-tier{flex:1 1 0;padding:22px 34px}
+.k-tier h3{font-size:38px}.k-tier p{font-size:30px}
+.k-ptbar{height:150px}
+/* 第二輪：稀疏頁放大 */
+.k-body>.k-g2 .k-card h3{font-size:40px}.k-body>.k-g2 .k-card p{font-size:33px}
+.k-body>.k-g3 .k-card h3{font-size:38px}.k-body>.k-g3 .k-card p{font-size:31px}
+.k-body>.k-g4 .k-card h3,.k-body>.k-g5c .k-card h3{font-size:34px}.k-body>.k-g4 .k-card p,.k-body>.k-g5c .k-card p{font-size:29px}
+.k-body>.k-g2 .k-card .k-no,.k-body>.k-g3 .k-card .k-no,.k-body>.k-g4 .k-card .k-no,.k-body>.k-g5c .k-card .k-no{font-size:56px;margin-bottom:10px}
+.k-col1 table.k-table{flex:1 1 auto;height:100%}
+.k-hbf,.k-hbt{height:54px}
+.k-hbl{font-size:29px}
+.k-hbv{font-size:40px}
+.k-pubonly{display:none}
+.k-pubshow{display:flex;flex-direction:column;gap:12px;justify-content:center;min-width:0}
+</style>
+</head>
+<body>
+<!-- lecture-deck-workflow 樣板｜canvas 1920x1080
+     寫頁規則：
+       <section class="k-slide" data-chapter="章名" data-title="頁名" [data-notes="主講提示（不配音）"]>
+       逐步揭示：元素加 data-s="1"、data-s="2"…（第 n 步出現）；選擇題 .k-opt 加 data-reveal="n" 讓自動播放在第 n 步揭曉
+       逐字稿：<template class="k-narr"><p data-step="0">一句一拍…</p><p data-step="1">…</p></template>
+               data-step＝這句開始時要揭示到第幾步；同一步可以有多句
+       出處：<p class="k-cite">…</p>（每頁數字都要有出處）
+     操作：主講 ← → 翻頁／N 講稿／O 總覽／B 黑屏／F 全螢幕；自動 空白鍵 播放暫停／← → 上下句／S 字幕／M 配樂 -->
+
+<main id="k-stage">
+
+<section class="k-slide k-ncover" data-title="封面">
+<div class="k-nc-l">
+<p class="k-nc-kick">PGY 核心課程｜老年周全性評估 CGA</p>
+<h1>認知評估異常<br/>之後，下一步</h1>
+<p class="k-nc-sub">從篩檢分數，到一份做得到的照護計畫</p>
+<div class="k-nc-meta">
+<p class="k-who">陳培豪 醫師</p>
+<p>馬偕紀念醫院 神經科・失智防治中心主任</p>
+<p>2026 年 11 月</p>
+</div>
+</div>
+<div class="k-nc-r">
+<div class="k-nc-dz"><b style="background:#C2410C">1</b><span>排除急症<small>譫妄、紅旗、藥物、MRI、安全</small></span></div>
+<div class="k-nc-dz"><b style="background:#1F6FB2">2</b><span>症候群與分期<small>知情者、MoCA、IADL、CDR</small></span></div>
+<div class="k-nc-dz"><b style="background:#5B3FA0">3</b><span>生物標記<small>2026 FDA 血液檢測、前測機率</small></span></div>
+<div class="k-nc-dz"><b style="background:#B45309">4</b><span>治療決策<small>症狀藥物、抗類澱粉、ARIA</small></span></div>
+<div class="k-nc-dz"><b style="background:#2E8B74">5</b><span>照護閉環<small>WHO 2026、長照、預立醫療</small></span></div>
+</div>
+<template class="k-narr">
+<p data-step="0">各位 PGY 醫師大家好，我是馬偕神經科的陳培豪。</p>
+<p data-step="0">今天不談量表怎麼考幾分，而是談分數異常之後，第一線醫師下一步要做什麼。</p>
+<p data-step="0">我們會跟著一位七十一歲的林先生，走完五站，最後寫出一份真的做得到的照護計畫。</p>
+</template>
+</section>
+<section class="k-slide" data-title="路線圖">
+<div class="k-head">
+<h2>篩檢陽性之後，要依序走完五站</h2>
+<p class="k-sub">每一站都要產出一個決定；不能跳站</p>
+</div>
+<div class="k-body">
+<div class="k-g3"><div class="k-card navy" data-s="1"><p class="k-no">1</p><h3>排除急症</h3><p>譫妄、紅旗、藥物、檢驗、MRI、安全</p></div><div class="k-card sage" data-s="2"><p class="k-no">2</p><h3>症候群與分期</h3><p>知情者、MoCA、IADL、CDR：MCI 或失智</p></div><div class="k-card terra" data-s="3"><p class="k-no">3</p><h3>生物標記</h3><p>2026 血液檢測、前測機率、PET／CSF</p></div><div class="k-card butter" data-s="4"><p class="k-no">4</p><h3>治療決策</h3><p>症狀藥物、抗類澱粉抗體、ARIA、BPSD</p></div><div class="k-card navy" data-s="5"><p class="k-no">5</p><h3>照護閉環</h3><p>WHO 2026、長照、照顧者、預立醫療</p></div><div class="k-card sage" data-s="6"><p class="k-no">⚠</p><h3>最常見的三種跳站</h3><p>沒排譫妄就判讀分數；沒看功能就下診斷；沒有症候群就抽標記</p></div></div>
+<p class="k-take">先排急症 → 確認症候群與分期 → 才問病因 → 治療 → 閉環</p>
+<p class="k-cite">出處：Atri A, et al. Alzheimers Dement 2025;21:e14333. PMID 39713942｜Jack CR Jr, et al. Alzheimers Dement 2024;20:5143–69. PMID 38934362</p>
+</div>
+<template class="k-narr">
+<p data-step="0">今天的路線分五站，每一站都要做出一個決定。</p>
+<p data-step="1">第一站，排除不能等的事。</p>
+<p data-step="2">第二站，確認症候群，再用功能分期。</p>
+<p data-step="3">第三站才問病因，談血液檢測。</p>
+<p data-step="4">第四站是治療決策。</p>
+<p data-step="5">第五站，把照護變成閉環。</p>
+<p data-step="6">最常見的錯誤就是跳站：沒排譫妄就判讀分數，沒看功能就下診斷，沒有症候群就抽標記。</p>
+</template>
+</section>
+<section class="k-slide" data-title="個案">
+<div class="k-head">
+<h2>林先生 71 歲：女兒說「爸爸不太對勁」</h2>
+<p class="k-sub">教學用複合個案（作者自擬，非真實病人）</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-stack1"><div class="k-card navy" data-s="1"><h3>基本資料</h3><p>退休公務員，教育 12 年；高血壓、高血脂；BMI 26.8；母親 75 歲診斷失智</p></div><div class="k-card sage" data-s="2"><h3>門診初篩</h3><p>AD8 5／8（女兒填）、MoCA 23／30、MMSE 27／30、SPMSQ 錯 1 題</p></div></div></div><div class="k-g2"><div class="k-card navy" data-s="3"><h3>記憶</h3><p>同一件事反覆問</p></div><div class="k-card sage" data-s="3"><h3>執行功能</h3><p>繳水電帳單常出錯</p></div><div class="k-card terra" data-s="4"><h3>視空間</h3><p>熟悉超市找不到路</p></div><div class="k-card butter" data-s="4"><h3>安全</h3><p>煮湯忘記關火</p></div><div class="k-card navy" data-s="5"><h3>精神行為</h3><p>新發焦躁</p></div><div class="k-card sage" data-s="5"><h3>病程</h3><p>半年內逐漸變差</p></div></div></div>
+<p class="k-take">主訴來自女兒，線索橫跨記憶、執行、視空間、安全與行為</p>
+</div>
+<template class="k-narr">
+<p data-step="0">這是今天全程的教學個案，七十一歲的林先生。</p>
+<p data-step="1">他教育十二年，有高血壓和高血脂，母親七十五歲診斷失智。</p>
+<p data-step="2">初篩 AD8 五分，MoCA 二十三分，但 MMSE 有二十七分。</p>
+<p data-step="3">女兒說他同一件事反覆問，帳單常出錯。</p>
+<p data-step="4">去熟悉的超市找不到路，煮湯忘了關火。</p>
+<p data-step="5">個性變得焦躁，而且是半年內慢慢變差。</p>
+<p data-step="5">請大家記住這幾條線索，接下來每一站，我們都要替林先生做一個決定。主訴來自女兒，這一點本身就是線索，病人常常覺得自己沒事。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="決策點 1">
+<div class="k-head">
+<h2>決策點 1：今天門診的第一步？</h2>
+<p class="k-sub">林先生 71 歲，AD8 5／8、MoCA 23／30；女兒說他半年來帳單出錯、超市迷路、忘了關火</p>
+</div>
+<div class="k-body">
+<div class="k-opts k-opts2">
+<button class="k-opt bad" data-reveal="1"><span class="k-letter">A</span><span><span class="k-say">先抽血漿 p-tau217</span><span class="k-fb"><strong class="k-t">✗ 太早</strong>：血液檢測用在有症狀、已完成臨床評估的人，不能取代評估</span></span></button>
+<button class="k-opt bad" data-reveal="2"><span class="k-letter">B</span><span><span class="k-say">先開 donepezil</span><span class="k-fb"><strong class="k-t">✗ 太早</strong>：症候群與分期都未確認，MCI 也缺乏高品質用藥證據</span></span></button>
+<button class="k-opt good" data-reveal="3"><span class="k-letter">C</span><span><span class="k-say">先確認急性變化、譫妄、藥物與安全，再問知情者與功能</span><span class="k-fb"><strong class="k-s">✓ 正解</strong>：篩檢異常只是訊號，先處理不能等的事</span></span></button>
+<button class="k-opt bad" data-reveal="4"><span class="k-letter">D</span><span><span class="k-say">直接排類澱粉 PET</span><span class="k-fb"><strong class="k-t">✗ 不改變今天的處置</strong>：結果會影響治療決策時才安排</span></span></button>
+</div>
+<p class="k-take">分數異常不是診斷，第一步是抬頭看病人</p>
+<p class="k-cite">出處：Atri A, et al. Alzheimers Dement 2025;21:e14333. PMID 39713942｜Palmqvist S, et al. Alzheimers Dement 2025;21:e70535. PMID 40729527｜Petersen RC, et al. Neurology 2018;90:126–35. PMID 29282327</p>
+</div>
+<template class="k-narr">
+<p data-step="0">林先生的 AD8 五分，MoCA 二十三分。請先想一想，今天門診的第一步是什麼？</p>
+<p data-step="1">選抽血的同學，這一步太早了。血液檢測要用在有症狀、而且已經完成臨床評估的人。</p>
+<p data-step="2">開 donepezil 也太早。症候群和分期都還沒確認，MCI 也沒有高品質的用藥證據。</p>
+<p data-step="3">正解是先確認急性變化、譫妄、藥物和安全，再向知情者問功能。</p>
+<p data-step="4">類澱粉 PET 也不急，結果會影響治療決策時才需要安排。</p>
+</template>
+</section>
+<section class="k-slide k-chap" data-chapter="急症" data-nonav="1" data-title="01 排除急症">
+<div class="k-ch-l">
+<p class="k-ch-no" style="color:#C2410C">01</p>
+<h2>排除急症</h2>
+<p class="k-ch-en">RULE OUT THE URGENT FIRST</p>
+<ol><li data-s="1"><b style="background:#C2410C">1</b>急性、波動、注意力不集中：先當譫妄</li><li data-s="1"><b style="background:#C2410C">2</b>紅旗：當天影像或急診</li><li data-s="1"><b style="background:#C2410C">3</b>藥物、檢驗、MRI：找可處理的因素</li><li data-s="1"><b style="background:#C2410C">4</b>安全 CGA：第一天指定負責人</li></ol>
+</div>
+<div class="k-ch-r"><img alt="" src="assets/ill/ill_journey.png"/><p class="k-gencap">AI 生成示意</p></div>
+<template class="k-narr">
+<p data-step="0">第一站。看到低分，第一個動作不是翻量表，而是抬頭看病人。</p>
+<p data-step="1">是不是急性混亂？有沒有不能等的神經急症？有哪些藥物和安全問題要今天處理？</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="譫妄與失智">
+<div class="k-head">
+<h2>譫妄或失智？看起病、波動與注意力</h2>
+<p class="k-sub">Confusion Assessment Method（CAM）：① ＋ ② ＋（③ 或 ④）</p>
+</div>
+<div class="k-body">
+<div class="k-split2 k-s64"><div class="k-col1"><table class="k-table"><tr><th></th><th>譫妄</th><th>失智（AD 型）</th></tr><tr data-s="1"><td class="k-item">起病</td><td>數小時至數天</td><td>數月至數年</td></tr><tr data-s="2"><td class="k-item">病程</td><td>一天內起伏波動</td><td>緩慢逐步進展</td></tr><tr data-s="3"><td class="k-item">注意力</td><td>明顯受損</td><td>早期相對保留</td></tr><tr data-s="4"><td class="k-item">意識</td><td>可改變</td><td>早期清醒</td></tr><tr data-s="5"><td class="k-item">處置</td><td>當急症找原因</td><td>完整評估、長期照護</td></tr></table></div><div class="k-g2"><div class="k-card navy" data-s="6"><p class="k-no">①</p><h3>急性發作＋波動</h3><p>必要</p></div><div class="k-card sage" data-s="6"><p class="k-no">②</p><h3>注意力不集中</h3><p>必要</p></div><div class="k-card terra" data-s="7"><p class="k-no">③</p><h3>思考紊亂</h3><p>二擇一</p></div><div class="k-card butter" data-s="7"><p class="k-no">④</p><h3>意識改變</h3><p>二擇一</p></div></div></div>
+<p class="k-take">林先生：半年漸進、無波動、注意力保留，不像譫妄</p>
+<p class="k-cite">出處：Inouye SK, et al. Ann Intern Med 1990;113:941–8. PMID 2240918</p>
+</div>
+<template class="k-narr">
+<p data-step="0">譫妄是醫療急症，要從三件事分辨：起病、波動和注意力。</p>
+<p data-step="1">譫妄幾小時到幾天發生。</p>
+<p data-step="2">一天之內起伏波動。</p>
+<p data-step="3">注意力明顯受損，這是最關鍵的差別。</p>
+<p data-step="5">所以譫妄要當急症找原因，量表延後再測。</p>
+<p data-step="6">CAM 判讀，前兩項都要有。</p>
+<p data-step="7">再加上思考紊亂或意識改變其中一項。林先生半年漸進、沒有波動，不像譫妄。</p>
+<p data-step="7">另外要記得，失智的人也會疊加譫妄。住院病人的低分，常常是急性混亂，不是失智本身，所以出院後要再評估一次。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="4AT">
+<div class="k-head">
+<h2>4AT：兩分鐘篩譫妄</h2>
+<p class="k-sub">四題、不需訓練；急診與病房都能用</p>
+</div>
+<div class="k-body">
+<div class="k-split2 k-s64"><div class="k-col1"><table class="k-table"><tr><th>題目</th><th>內容</th><th>計分</th></tr><tr data-s="1"><td class="k-item">警覺度</td><td>嗜睡或躁動</td><td>0／4</td></tr><tr data-s="2"><td class="k-item">AMT4</td><td>年齡、生日、地點、年份</td><td>0／1／2</td></tr><tr data-s="3"><td class="k-item">注意力</td><td>月份倒數</td><td>0／1／2</td></tr><tr data-s="4"><td class="k-item">急性變化</td><td>兩週內或仍波動</td><td>0／4</td></tr></table></div><div class="k-kpis"><div class="k-kpi k-good" data-s="5"><p class="k-kl">合併敏感度（95% CI 0.80–0.93）</p><p class="k-kv">0.88</p><p class="k-kd">17 研究、3,702 次觀察</p></div><div class="k-kpi k-neu" data-s="5"><p class="k-kl">合併特異度（95% CI 0.82–0.92）</p><p class="k-kv">0.88</p><p class="k-kd">研究中譫妄盛行率 24.2%</p></div><div class="k-kpi" data-s="6"><p class="k-kl">總分判讀</p><p class="k-kv">≥4 可能譫妄</p><p class="k-kd">1–3 可能認知障礙；0 不太可能</p></div></div></div>
+<p class="k-take">4AT ≥4 分就當可能譫妄處理，先找原因</p>
+<p class="k-cite">出處：Tieges Z, et al. Age Ageing 2021;50:733–43. PMID 33951145｜4AT 官方說明 https://www.the4at.com</p>
+</div>
+<template class="k-narr">
+<p data-step="0">床邊最實用的工具是 4AT，兩分鐘完成。</p>
+<p data-step="1">第一題看警覺度。</p>
+<p data-step="2">第二題問年齡、生日、地點和年份。</p>
+<p data-step="3">第三題月份倒數。</p>
+<p data-step="4">第四題看有沒有急性變化。</p>
+<p data-step="5">統合分析的敏感度和特異度都是零點八八。</p>
+<p data-step="6">總分四分以上，就當可能譫妄處理。</p>
+<p data-step="6">第一題和第四題各佔四分，只要明顯異常就直接達到切點。兩分鐘的工具，換來的是不漏掉一個醫療急症。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="APA 2025 譫妄指引">
+<div class="k-head">
+<h2>APA 2025 譫妄指引：先非藥物</h2>
+<p class="k-sub">15 項聲明（12 項建議、3 項提議）；括號內為建議強度與證據等級</p>
+</div>
+<div class="k-body">
+<div class="k-g2"><div class="k-card navy" data-s="1"><h3>要做</h3><p>定期結構化評估（1C）；建立認知基準（1C）；詳細藥物回顧（1C）</p></div><div class="k-card sage" data-s="2"><h3>第一線</h3><p>多元非藥物介入，用於預防與處置（1B）</p></div><div class="k-card terra" data-s="3"><h3>不要做</h3><p>抗精神病藥不用於預防或加速緩解（1C）；無特定適應症不用苯二氮平類（1C）</p></div><div class="k-card butter" data-s="4"><h3>有條件用</h3><p>抗精神病藥：降階失敗、已處理誘因，且有顯著痛苦或傷害風險（1C）</p></div></div>
+<p class="k-take">譫妄不是開一顆藥解決，而是找原因、改環境、少用藥</p>
+<p class="k-cite">出處：American Psychiatric Association. Updated guideline for delirium, 2025-09-02, https://www.psychiatry.org/News-room/News-Releases/APA-Published-Updated-Guideline-for-Delirium ｜Crone C, et al. Am J Psychiatry 2025;182:880–4. PMID 40887950</p>
+</div>
+<template class="k-narr">
+<p data-step="0">去年美國精神醫學會更新了譫妄指引，共十五項聲明。</p>
+<p data-step="1">要定期評估，建立認知基準，並仔細回顧藥物。</p>
+<p data-step="2">第一線是多元的非藥物介入。</p>
+<p data-step="3">抗精神病藥不用來預防，也不用來加速緩解。</p>
+<p data-step="4">只有降階失敗、誘因已處理，而且有顯著痛苦或傷害風險時，才考慮使用。</p>
+<p data-step="4">請注意，這和過去習慣開 haloperidol 的做法很不一樣。病人轉出時，譫妄評估和藥物回顧也要寫進交班，家屬也要一起衛教。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="神經急症紅旗">
+<div class="k-head">
+<h2>紅旗：出現任一項就不是門診慢慢追</h2>
+<p class="k-sub">有紅旗就當天影像或送急診</p>
+</div>
+<div class="k-body">
+<div class="k-g2"><div class="k-card navy" data-s="1"><h3>局灶神經徵象</h3><p>突發單側無力、失語、偏盲：想到中風、腫瘤</p></div><div class="k-card sage" data-s="2"><h3>頭傷或抗凝藥物</h3><p>跌倒、抗凝或抗血小板藥、新發頭痛：想到慢性硬腦膜下出血</p></div><div class="k-card terra" data-s="3"><h3>數週內快速惡化</h3><p>合併肌陣攣、癲癇、精神症狀：想到庫賈氏病、自體免疫腦炎</p></div><div class="k-card butter" data-s="4"><h3>發燒、頸部僵硬、意識改變</h3><p>合併感染徵象或免疫低下：想到中樞神經感染</p></div></div>
+<p class="k-take">林先生：神經學檢查正常、無頭傷、無快速惡化，可安排門診完整評估</p>
+<p class="k-cite">出處：Atri A, et al. Alzheimers Dement 2025;21:e14333. PMID 39713942</p>
+</div>
+<template class="k-narr">
+<p data-step="0">再來是四組神經急症紅旗。</p>
+<p data-step="1">局灶徵象，想到中風或腫瘤。</p>
+<p data-step="2">老人跌倒或吃抗凝藥，慢性硬腦膜下出血常常只表現成最近變糊塗。</p>
+<p data-step="3">數週內快速惡化，想到庫賈氏病和自體免疫腦炎。</p>
+<p data-step="4">發燒、頸部僵硬、意識改變，要想到感染。林先生都沒有。</p>
+<p data-step="4">這四組紅旗，門診三分鐘就能問完。問到一項，就不要等三個月後的神經心理測驗。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="基本檢驗">
+<div class="k-head">
+<h2>基本檢驗：找會加重認知的共病</h2>
+<p class="k-sub">不是找「可逆的失智」，單一可逆原因其實很少見</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>項目</th><th>為什麼要驗</th><th>林先生</th></tr><tr data-s="1"><td class="k-item">CBC</td><td>貧血、感染；大球性提示 B12 缺乏</td><td>Hb 14.2 g/dL</td></tr><tr data-s="2"><td class="k-item">電解質、鈣、肝腎</td><td>低鈉、高血鈣、肝腎腦病變</td><td>Na 140；eGFR 78</td></tr><tr data-s="3"><td class="k-item">血糖、HbA1c</td><td>反覆低血糖或血糖失控</td><td>HbA1c 5.8%</td></tr><tr data-s="4"><td class="k-item">TSH</td><td>甲狀腺低下：淡漠、反應慢</td><td>2.1 mIU/L</td></tr><tr data-s="5"><td class="k-item">B12（± 葉酸）</td><td>缺乏時補充才有意義</td><td>正常</td></tr><tr data-s="6"><td class="k-item">梅毒、HIV</td><td>依風險與病史加做</td><td>梅毒血清陰性</td></tr></table>
+<p class="k-take">這些檢驗找的是共病，不要對家屬過度承諾會恢復</p>
+<p class="k-cite">出處：Atri A, et al. Alzheimers Dement 2025;21:e14333. PMID 39713942；林先生數值為教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">基本檢驗的目的，是找出會讓認知更差的問題。</p>
+<p data-step="1">全血球看貧血和感染。</p>
+<p data-step="2">接著驗電解質、血鈣，還有肝腎功能。</p>
+<p data-step="3">血糖要看有沒有反覆低血糖。</p>
+<p data-step="4">甲狀腺低下常常表現成淡漠和反應慢。</p>
+<p data-step="5">B12 缺乏才需要補充。</p>
+<p data-step="6">梅毒和 HIV 依風險加做。單一可逆原因很少見，不要對家屬過度承諾。</p>
+<p data-step="6">教科書常說可逆性失智，但實際上找到單一原因、治療後完全恢復的情況很少。對家屬要說，我們在找會讓情況更差的問題。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="審視用藥">
+<div class="k-head">
+<h2>停一顆藥，常比加一顆藥有效</h2>
+<p class="k-sub">2023 AGS Beers：失智或認知障礙者避免以下藥物</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>類別</th><th>常見品項</th><th>可能後果</th></tr><tr data-s="1"><td class="k-item">第一代抗組織胺</td><td>diphenhydramine、hydroxyzine、chlorpheniramine</td><td>混亂、便秘、尿滯留</td></tr><tr data-s="2"><td class="k-item">膀胱抗痙攣藥</td><td>oxybutynin、tolterodine</td><td>記憶與注意力變差</td></tr><tr data-s="3"><td class="k-item">三環抗憂鬱藥</td><td>amitriptyline、imipramine</td><td>抗膽鹼負擔、姿勢性低血壓</td></tr><tr data-s="4"><td class="k-item">苯二氮平、Z-drugs</td><td>lorazepam、diazepam、zolpidem</td><td>嗜睡、跌倒、夜間混亂</td></tr><tr data-s="5"><td class="k-item">抗精神病藥</td><td>haloperidol、quetiapine、risperidone</td><td>中風與死亡風險增加</td></tr></table>
+<p class="k-take">雲端藥歷加成藥一起盤點；一次改一項並記錄變化</p>
+<p class="k-cite">出處：2023 AGS Beers Criteria. J Am Geriatr Soc 2023;71:2052–81. PMID 37139824</p>
+</div>
+<template class="k-narr">
+<p data-step="0">第三件事是審視用藥，這是最常見的醫源性認知變差。</p>
+<p data-step="1">感冒藥和止癢藥裡的第一代抗組織胺。</p>
+<p data-step="2">治頻尿的膀胱抗痙攣藥。</p>
+<p data-step="3">三環抗憂鬱藥。</p>
+<p data-step="4">安眠藥和苯二氮平類。</p>
+<p data-step="5">還有抗精神病藥。雲端藥歷、成藥和中草藥要一起盤點，一次只改一項。林先生只吃血壓和血脂藥。</p>
+<p data-step="5">請特別留意長輩自己買的感冒藥和安眠藥。停掉一顆抗膽鹼藥，常常比加一顆失智藥更快看到效果。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="腦部 MRI">
+<div class="k-head">
+<h2>MRI 同時回答三個問題</h2>
+<p class="k-sub">支持哪個病因？血管負擔多重？未來治療安不安全？</p>
+</div>
+<div class="k-body">
+<div class="k-g4"><div class="k-card navy" data-s="1"><p class="k-no">MTA 2</p><h3>內側顳葉萎縮</h3><p>海馬中度萎縮：支持 AD 型退化</p></div><div class="k-card sage" data-s="2"><p class="k-no">Fazekas 1</p><h3>白質高訊號</h3><p>零星點狀：血管負擔輕</p></div><div class="k-card terra" data-s="3"><p class="k-no">微出血 1 顆</p><h3>SWI／GRE</h3><p>無表面鐵質沉積：未達排除條件</p></div><div class="k-card butter" data-s="4"><p class="k-no">陰性</p><h3>排除性病灶</h3><p>無腫瘤、硬腦膜下出血、梗塞、水腦</p></div></div>
+<p class="k-take">≥2 顆微出血或任何表面鐵質沉積都是 ARIA 風險因子；微出血 &gt;4 顆為試驗排除</p>
+<p class="k-cite">出處：Scheltens P, et al. JNNP 1992;55:967–72. PMID 1431963｜Fazekas F, et al. AJR 1987;149:351–6. PMID 3496763｜LEQEMBI Prescribing Information, DailyMed SPL 2026-07-21, §5.1；林先生影像為教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">MRI 不只排除腫瘤，同時回答三個問題。</p>
+<p data-step="1">林先生內側顳葉萎縮兩分，支持 AD 型退化。</p>
+<p data-step="2">白質病變輕微，血管負擔不重。</p>
+<p data-step="3">微出血一顆，沒有表面鐵質沉積。這決定未來能不能用抗類澱粉抗體。</p>
+<p data-step="4">同時也排除了腫瘤、硬腦膜下出血和水腦。</p>
+<p data-step="4">很多人以為 MRI 只是排除腫瘤。其實今天的微出血和鐵質沉積，就是明天能不能接受新藥的安全底線。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="急症" data-title="安全 CGA">
+<div class="k-head">
+<h2>安全 CGA：第一天就指定負責人</h2>
+<p class="k-sub">產出是「誰、什麼時候、做什麼」，不是勾選表</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>風險</th><th>林先生的線索</th><th>今天的行動</th><th>負責人</th></tr><tr data-s="1"><td class="k-item">駕駛騎車</td><td>熟悉路線迷路</td><td>暫停騎車，安排評估</td><td>醫師＋女兒</td></tr><tr data-s="2"><td class="k-item">爐火家電</td><td>忘記關火</td><td>自動熄火或改電磁爐</td><td>女兒</td></tr><tr data-s="3"><td class="k-item">財務詐騙</td><td>帳單出錯</td><td>自動扣繳、大額雙人確認</td><td>女兒＋銀行</td></tr><tr data-s="4"><td class="k-item">走失</td><td>超市迷路一次</td><td>愛心手鍊、指紋建檔</td><td>社工＋家屬</td></tr><tr data-s="5"><td class="k-item">用藥</td><td>自行服藥</td><td>一週藥盒、家屬核對</td><td>女兒</td></tr></table>
+<p class="k-take">醫師一句話，常比家屬勸三個月有效</p>
+<p class="k-cite">出處：Atri A, et al. Alzheimers Dement 2025;21:e14333. PMID 39713942；教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">第一站的最後一件事，是安全。</p>
+<p data-step="1">駕駛和騎車，今天就先暫停。</p>
+<p data-step="2">爐火可以加裝自動熄火。</p>
+<p data-step="3">財務改自動扣繳，大額要兩個人確認。</p>
+<p data-step="4">走失要做愛心手鍊和指紋建檔。</p>
+<p data-step="5">用藥用一週藥盒。每一項都要指定負責人，寫進病歷。</p>
+<p data-step="5">你可以這樣說：為了您和家人的安全，從今天起先暫停騎車。醫師一句話，常常比家屬勸三個月更有效。</p>
+</template>
+</section>
+<section class="k-slide k-chap" data-chapter="分期" data-nonav="1" data-title="02 症候群與分期">
+<div class="k-ch-l">
+<p class="k-ch-no" style="color:#1F6FB2">02</p>
+<h2>症候群與分期</h2>
+<p class="k-ch-en">CONFIRM THE SYNDROME, STAGE BY FUNCTION</p>
+<ol><li data-s="1"><b style="background:#1F6FB2">1</b>AD8 看改變，MoCA 看哪裡不好</li><li data-s="1"><b style="background:#1F6FB2">2</b>MMSE 正常不能排除 MCI</li><li data-s="1"><b style="background:#1F6FB2">3</b>分數之前，先檢查測驗品質</li><li data-s="1"><b style="background:#1F6FB2">4</b>MCI 與失智的分界在日常功能</li><li data-s="1"><b style="background:#1F6FB2">5</b>CDR 定分期，CDR-SB 看變化</li></ol>
+</div>
+<div class="k-ch-r"><img alt="" src="assets/ill/ill_biomarker_tiers.png"/><p class="k-gencap">AI 生成示意</p></div>
+<template class="k-narr">
+<p data-step="0">第二站。排除急症之後，描述這個人的認知哪裡出問題，再用日常功能決定分期。</p>
+<p data-step="1">工具沒有好壞，只有用對場合。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="工具選擇">
+<div class="k-head">
+<h2>每個量表回答的問題不一樣</h2>
+<p class="k-sub">沒有萬用工具；門診三分鐘用 AD8 或 Mini-Cog 入門</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>工具</th><th>誰答／時間</th><th>滿分</th><th>擅長</th><th>限制</th></tr><tr data-s="1"><td class="k-item">AD8</td><td>知情者／3 分</td><td>8</td><td>抓改變，極輕度也敏感</td><td>受觀察多寡影響</td></tr><tr data-s="2"><td class="k-item">Mini-Cog</td><td>病人／3 分</td><td>5</td><td>快，受教育影響小</td><td>看不出認知域</td></tr><tr data-s="3"><td class="k-item">MMSE</td><td>病人／7–10 分</td><td>30</td><td>歷史久、健保常用</td><td>天花板效應</td></tr><tr data-s="4"><td class="k-item">MoCA</td><td>病人／10–15 分</td><td>30</td><td>執行、視空間、回憶</td><td>低教育需校正</td></tr><tr data-s="5"><td class="k-item">CASI</td><td>病人／15–20 分</td><td>100</td><td>台灣常模完整</td><td>耗時、需受訓</td></tr></table>
+<p class="k-take">MoCA 才看得出認知域；追蹤要用同一工具</p>
+<p class="k-cite">出處：Galvin 2005 PMID 16116116｜Borson 2000 PMID 11113982｜Folstein 1975 PMID 1202204｜Nasreddine 2005 PMID 15817019｜Teng 1994 PMID 8054493</p>
+</div>
+<template class="k-narr">
+<p data-step="0">先看工具。每個量表回答的問題不一樣。</p>
+<p data-step="1">AD8 由知情者回答，抓的是改變。</p>
+<p data-step="2">Mini-Cog 三分鐘，受教育影響小。</p>
+<p data-step="3">MMSE 健保常用，但對輕微障礙不敏感。</p>
+<p data-step="4">MoCA 加入執行功能和延遲回憶。</p>
+<p data-step="5">CASI 台灣常模完整，但耗時。</p>
+<p data-step="5">所以門診三分鐘，先用 AD8 或 Mini-Cog 入門。真的要看認知域，再用 MoCA。追蹤的時候，要用同一個工具才能比較。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="AD8">
+<div class="k-head">
+<h2>AD8：問知情者「和以前比有沒有改變」</h2>
+<p class="k-sub">比的是病人自己的過去，不是同齡常模；實心＝林先生勾選</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-ad8"><p class="k-on" data-s="1"><b>1</b>判斷力變差</p><p class="" data-s="1"><b>2</b>對活動嗜好興趣降低</p><p class="k-on" data-s="1"><b>3</b>重複相同問題或故事</p><p class="" data-s="1"><b>4</b>學用工具家電有困難</p><p class="" data-s="1"><b>5</b>忘記正確年份月份</p><p class="k-on" data-s="1"><b>6</b>處理複雜財務有困難</p><p class="k-on" data-s="1"><b>7</b>記不住約會時間</p><p class="k-on" data-s="1"><b>8</b>持續有思考記憶問題</p></div></div><div class="k-kpis"><div class="k-kpi k-good" data-s="2"><p class="k-kl">區分正常與失智（切點 ≥2）</p><p class="k-kv">AUC 0.961</p><p class="k-kd">敏感度 97.6%、特異度 78.1%</p></div><div class="k-kpi k-neu" data-s="2"><p class="k-kl">區分正常與極輕度失智</p><p class="k-kv">AUC 0.948</p><p class="k-kd">敏感度 95.9%、特異度 78.1%</p></div><div class="k-kpi" data-s="3"><p class="k-kl">林先生</p><p class="k-kv">5／8</p><p class="k-kd">第 1、3、6、7、8 題</p></div></div></div>
+<p class="k-take">AD8 ≥2 分就值得完整評估；女兒的觀察是最有價值的病史</p>
+<p class="k-cite">出處：Galvin JE, et al. Neurology 2005;65:559–64. PMID 16116116｜Yang YH, et al. Am J Alzheimers Dis Other Demen 2011;26:134–8. PMID 21415088（台灣，n=239）</p>
+</div>
+<template class="k-narr">
+<p data-step="0">AD8 問的是和以前比有沒有改變。</p>
+<p data-step="1">比的是病人自己的過去，所以高教育者的早期變化也抓得到。</p>
+<p data-step="2">台灣驗證，切點兩分，區分正常和極輕度失智的 AUC 是零點九四八。</p>
+<p data-step="3">林先生五分，女兒的觀察是最有價值的病史。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="MoCA-T">
+<div class="k-head">
+<h2>偵測 MCI，MoCA 明顯優於 MMSE</h2>
+<p class="k-sub">台北榮總記憶門診 n=207：AD 98、MCI 71、正常 38</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-hbars"><div class="k-hbr" data-s="1"><span class="k-hbl">MoCA-T 偵測 MCI</span><span class="k-hbt"><span class="k-hbf" style="width:91.0%;background:#1F6FB2"></span></span><span class="k-hbv">0.91</span></div><div class="k-hbr" data-s="1"><span class="k-hbl">MMSE 偵測 MCI</span><span class="k-hbt"><span class="k-hbf" style="width:81.0%;background:#8A96A3"></span></span><span class="k-hbv">0.81</span></div></div></div><div class="k-kpis"><div class="k-kpi k-neu" data-s="2"><p class="k-kl">最佳切點</p><p class="k-kv">23／24</p><p class="k-kd">門診族群</p></div><div class="k-kpi k-good" data-s="2"><p class="k-kl">敏感度／特異度</p><p class="k-kv">92%／78%</p><p class="k-kd">偵測 MCI</p></div></div></div>
+<p class="k-take">到了失智階段兩者都分得出來；切點隨族群與教育而變</p>
+<p class="k-cite">出處：Tsai CF, et al. Int Psychogeriatr 2012;24:651–8. PMID 22152127</p>
+</div>
+<template class="k-narr">
+<p data-step="0">為什麼要做 MoCA？看台灣的資料。</p>
+<p data-step="1">偵測 MCI，MoCA 的 AUC 零點九一，MMSE 只有零點八一。</p>
+<p data-step="2">最佳切點二十三比二十四，敏感度九成二。切點會隨族群和教育改變，不要死背。</p>
+<p data-step="2">到了失智階段，兩個量表都分得出來。差別在最早期，也就是我們最需要介入的時候。林先生仍然需要功能評估。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="林先生 MoCA">
+<div class="k-head">
+<h2>看失分落在哪裡，比總分更有用</h2>
+<p class="k-sub">原始 22 分＋教育 ≤12 年加 1 分＝23／30</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-hbars"><div class="k-hbr" data-s="1"><span class="k-hbl">延遲回憶 2／5</span><span class="k-hbt"><span class="k-hbf" style="width:40.0%;background:#C2410C"></span></span><span class="k-hbv">40%</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">視空間執行 3／5</span><span class="k-hbt"><span class="k-hbf" style="width:60.0%;background:#B45309"></span></span><span class="k-hbv">60%</span></div><div class="k-hbr" data-s="3"><span class="k-hbl">注意力 5／6</span><span class="k-hbt"><span class="k-hbf" style="width:83.0%;background:#1F6FB2"></span></span><span class="k-hbv">83%</span></div><div class="k-hbr" data-s="3"><span class="k-hbl">命名 3／3</span><span class="k-hbt"><span class="k-hbf" style="width:100.0%;background:#3F7A55"></span></span><span class="k-hbv">100%</span></div><div class="k-hbr" data-s="3"><span class="k-hbl">抽象 2／2</span><span class="k-hbt"><span class="k-hbf" style="width:100.0%;background:#3F7A55"></span></span><span class="k-hbv">100%</span></div></div></div><div class="k-g1"><div class="k-card navy" data-s="4"><h3>型態解讀</h3><p>延遲回憶最差，提示後只多想起 1 個字；合併視空間與執行失分：多認知域</p></div></div></div>
+<p class="k-take">分數只描述哪裡不好；是不是 MCI，要看功能</p>
+<p class="k-cite">出處：Nasreddine ZS, et al. J Am Geriatr Soc 2005;53:695–9. PMID 15817019｜Tsai 2012 PMID 22152127；教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">林先生二十三分，要再看失分的位置。</p>
+<p data-step="1">延遲回憶最差，五個字只記得兩個。</p>
+<p data-step="2">視覺空間和執行功能，也都有失分。</p>
+<p data-step="3">命名和抽象保留。</p>
+<p data-step="4">這是以記憶為主、合併執行功能的型態。但這是描述，不是診斷。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="四個分數">
+<div class="k-head">
+<h2>同一天四個分數，為什麼結論不同？</h2>
+<p class="k-sub">林先生若只做 SPMSQ 或 MMSE，就會被放回家</p>
+</div>
+<div class="k-body">
+<div class="k-g4"><div class="k-card navy" data-s="1"><p class="k-no">9／10</p><h3>SPMSQ</h3><p>錯 1 題：落在正常</p></div><div class="k-card sage" data-s="1"><p class="k-no">27／30</p><h3>MMSE</h3><p>看似正常</p></div><div class="k-card terra" data-s="2"><p class="k-no">5／8</p><h3>AD8（女兒）</h3><p>切點 ≥2：明顯異常</p></div><div class="k-card butter" data-s="2"><p class="k-no">23／30</p><h3>MoCA</h3><p>切點 23／24：異常</p></div></div>
+<p class="k-take">篩檢「通過」不等於正常：高教育者容易代償</p>
+<p class="k-cite">出處：Yang 2011 PMID 21415088｜Tsai 2012 PMID 22152127；教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">同一個人，同一天，四個分數。</p>
+<p data-step="1">SPMSQ 和 MMSE 看起來正常，因為題目以定向和簡單記憶為主，高教育者容易代償。</p>
+<p data-step="2">AD8 和 MoCA 都異常，一個看日常改變，一個看執行功能和延遲回憶。工具敏感度不同，不是誰對誰錯。</p>
+<p data-step="2">如果這位病人只做 SPMSQ 或 MMSE，他就會被放回家。篩檢通過，不等於正常。結論要整合知情者、認知域和功能。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="決策點 2">
+<div class="k-head">
+<h2>決策點 2：MMSE 27 分，是不是沒事？</h2>
+<p class="k-sub">女兒問：「分數正常，我們可以回家了嗎？」</p>
+</div>
+<div class="k-body">
+<div class="k-opts k-opts2"><button class="k-opt bad" data-reveal="1"><span class="k-letter">A</span><span><span class="k-say">可以，MMSE ≥24 分就是正常</span><span class="k-fb"><strong class="k-t">✗ 單一切點不足</strong>：MMSE 對執行功能與輕微記憶障礙不敏感</span></span></button><button class="k-opt bad" data-reveal="2"><span class="k-letter">B</span><span><span class="k-say">半年後再測一次 MMSE 就好</span><span class="k-fb"><strong class="k-t">✗ 會延誤</strong>：錯過安全介入與病因評估</span></span></button><button class="k-opt good" data-reveal="3"><span class="k-letter">C</span><span><span class="k-say">不能，要合併知情者、MoCA 與日常功能判斷</span><span class="k-fb"><strong class="k-s">✓ 正解</strong>：AD8 5、MoCA 23 都異常，接著看 IADL 與 CDR</span></span></button><button class="k-opt bad" data-reveal="4"><span class="k-letter">D</span><span><span class="k-say">改抽血液標記看看</span><span class="k-fb"><strong class="k-t">✗ 順序錯了</strong>：血液標記不能取代臨床評估</span></span></button></div>
+<p class="k-take">MMSE 在台灣門診偵測 MCI 的 AUC 只有 0.81</p>
+<p class="k-cite">出處：Tsai 2012 PMID 22152127｜Petersen RC, et al. Neurology 2018;90:126–35. PMID 29282327（PubMed 標示 retired）</p>
+</div>
+<template class="k-narr">
+<p data-step="0">女兒問，MMSE 二十七分正常，是不是沒事了？</p>
+<p data-step="1">選 A 不對，單一切點不夠。</p>
+<p data-step="2">選 B 也不好，半年後再測會延誤安全介入。</p>
+<p data-step="3">正解是 C，要合併知情者、MoCA 和日常功能。</p>
+<p data-step="4">選 D 順序錯了，血液標記不能取代臨床評估。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="測驗品質">
+<div class="k-head">
+<h2>判讀分數前，先檢查五件事</h2>
+<p class="k-sub">今天的分數，反映的是大腦，還是測驗條件？</p>
+</div>
+<div class="k-body">
+<div class="k-g5c"><div class="k-card navy" data-s="1"><p class="k-no">1</p><h3>感官</h3><p>老花眼鏡、助聽器有戴嗎？</p></div><div class="k-card sage" data-s="2"><p class="k-no">2</p><h3>語言識字</h3><p>母語？會寫字嗎？</p></div><div class="k-card terra" data-s="3"><p class="k-no">3</p><h3>教育文化</h3><p>常模適用嗎？</p></div><div class="k-card butter" data-s="4"><p class="k-no">4</p><h3>情緒動機</h3><p>焦慮、憂鬱、被考試感</p></div><div class="k-card navy" data-s="5"><p class="k-no">5</p><h3>急性狀況</h3><p>感染、疼痛、沒睡好、新藥</p></div></div>
+<p class="k-take">林先生：戴老花眼鏡、國語施測、無急性疾病：分數可信，可當追蹤基準</p>
+<p class="k-cite">出處：Atri A, et al. Alzheimers Dement 2025;21:e14333. PMID 39713942</p>
+</div>
+<template class="k-narr">
+<p data-step="0">判讀之前，先檢查測驗品質。</p>
+<p data-step="1">老花眼鏡和助聽器有沒有戴。</p>
+<p data-step="2">用的是不是母語。</p>
+<p data-step="3">常模適不適用。</p>
+<p data-step="4">是不是焦慮或覺得被考試。</p>
+<p data-step="5">有沒有急性狀況。報告上要寫施測條件，追蹤才能比較。</p>
+<p data-step="5">同一位長輩，忘了戴老花眼鏡，或聽不清楚指令，分數都可能掉好幾分。林先生這次施測條件良好，可以當追蹤基準。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="認知光譜">
+<div class="k-head">
+<h2>MCI 與失智的分界在日常功能</h2>
+<p class="k-sub">客觀測驗加日常功能才能定位</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-g2"><div class="k-card navy" data-s="1"><h3>正常老化</h3><p>偶爾忘記，事後想得起來</p></div><div class="k-card sage" data-s="2"><h3>SCD</h3><p>自覺退步，客觀測驗正常</p></div><div class="k-card terra" data-s="3"><h3>MCI</h3><p>測驗異常，複雜活動仍可獨立</p></div><div class="k-card butter" data-s="4"><h3>失智</h3><p>日常活動需要他人協助</p></div></div></div><div class="k-hbars"><div class="k-hbr" data-s="5"><span class="k-hbl">60–64 歲</span><span class="k-hbt"><span class="k-hbf" style="width:22.3%;background:#8A96A3"></span></span><span class="k-hbv">6.7%</span></div><div class="k-hbr" data-s="5"><span class="k-hbl">65–69 歲</span><span class="k-hbt"><span class="k-hbf" style="width:28.0%;background:#8A96A3"></span></span><span class="k-hbv">8.4%</span></div><div class="k-hbr" data-s="5"><span class="k-hbl">70–74 歲</span><span class="k-hbt"><span class="k-hbf" style="width:33.7%;background:#1F6FB2"></span></span><span class="k-hbv">10.1%</span></div><div class="k-hbr" data-s="5"><span class="k-hbl">75–79 歲</span><span class="k-hbt"><span class="k-hbf" style="width:49.3%;background:#1F6FB2"></span></span><span class="k-hbv">14.8%</span></div><div class="k-hbr" data-s="5"><span class="k-hbl">80–84 歲</span><span class="k-hbt"><span class="k-hbf" style="width:84.0%;background:#24476E"></span></span><span class="k-hbv">25.2%</span></div></div></div>
+<p class="k-take">65 歲以上 MCI 追蹤 2 年，累積失智發生率 14.9%；也可能持平或回復</p>
+<p class="k-cite">出處：Petersen 2018 PMID 29282327（retired，流行病學數據仍常被引用）｜Jessen F, et al. Lancet Neurol 2020;19:271–8. PMID 31958406</p>
+</div>
+<template class="k-narr">
+<p data-step="0">認知變化是一道光譜。</p>
+<p data-step="1">正常老化，事後想得起來。</p>
+<p data-step="2">SCD 是自覺退步，但測驗正常。</p>
+<p data-step="3">MCI 測驗異常，複雜活動仍能獨立。</p>
+<p data-step="4">失智就需要他人協助。</p>
+<p data-step="5">右邊是 MCI 盛行率，隨年齡上升。兩年累積失智發生率百分之十四點九，但也可能持平或回復。</p>
+<p data-step="5">所以對家屬，不要急著貼標籤，要定期追蹤。最重要的分界，只有一個：複雜的日常活動，還能不能獨立完成。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="IADL">
+<div class="k-head">
+<h2>IADL 先壞：問「怎麼做」不要問「會不會」</h2>
+<p class="k-sub">「上個月水電費誰繳的？有沒有出錯？誰在檢查？」</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>Lawton IADL</th><th>林先生（女兒描述）</th><th>判斷</th></tr><tr data-s="1"><td class="k-item">使用電話、購物、家務</td><td>獨立，偶爾重複買</td><td>獨立</td></tr><tr data-s="2"><td class="k-item">備餐</td><td>可煮，曾忘記關火</td><td>有失誤</td></tr><tr data-s="3"><td class="k-item">交通</td><td>熟悉地點迷路一次</td><td>有失誤</td></tr><tr data-s="4"><td class="k-item">服藥</td><td>藥盒＋女兒核對</td><td>有失誤</td></tr><tr data-s="5"><td class="k-item">財務</td><td>帳單出錯，女兒開始覆核</td><td>有失誤</td></tr><tr data-s="6"><td class="k-item">Katz ADL</td><td>進食到大小便控制</td><td>6／6 獨立</td></tr></table>
+<p class="k-take">判斷關鍵：是效率變差，還是必須有人接手？</p>
+<p class="k-cite">出處：Lawton MP, Brody EM. Gerontologist 1969;9:179–86. PMID 5349366｜Katz S, et al. JAMA 1963;185:914–9. PMID 14044222；教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">功能評估，問法很重要。不要問會不會繳費，要問上個月是誰繳的。</p>
+<p data-step="1">電話和購物大致獨立。</p>
+<p data-step="2">備餐有失誤。</p>
+<p data-step="3">交通有失誤。</p>
+<p data-step="4">服藥要女兒核對。</p>
+<p data-step="5">財務開始由女兒覆核。</p>
+<p data-step="6">基本日常活動六項都獨立。關鍵是效率變差，還是必須有人接手。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="CDR 向度">
+<div class="k-head">
+<h2>CDR：六個向度，各自 0 到 3 分</h2>
+<p class="k-sub">訪談病人與知情者後的臨床判斷，約 30 分鐘；個人照顧沒有 0.5</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>向度</th><th>0.5 疑似</th><th>1 輕度</th><th>2 中度</th></tr><tr><td class="k-item">記憶（主要）</td><td>持續輕微健忘</td><td>近事中度喪失</td><td>只記得熟練內容</td></tr><tr><td class="k-item">定向感</td><td>時間輕微困難</td><td>可能迷路</td><td>常失去時間定向</td></tr><tr><td class="k-item">判斷解決問題</td><td>輕微受損</td><td>中度困難</td><td>嚴重受損</td></tr><tr><td class="k-item">社區事務</td><td>輕微受損</td><td>無法獨立，可參與部分</td><td>家外無法獨立</td></tr><tr><td class="k-item">家居嗜好</td><td>輕微受損</td><td>放棄較難的</td><td>只做簡單家事</td></tr><tr><td class="k-item">個人照顧</td><td>（無 0.5）</td><td>需要提醒</td><td>需協助穿衣清潔</td></tr></table>
+<p class="k-take">CDR 是臨床判斷，不是把量表分數換算過去</p>
+<p class="k-cite">出處：Morris JC. Neurology 1993;43:2412–4. PMID 8232972</p>
+</div>
+<template class="k-narr">
+<p data-step="0">CDR 有六個向度，記憶是主要向度。它是訪談病人和知情者之後的臨床判斷，不是把量表分數換算過去。</p>
+<p data-step="0">個人照顧這一項沒有零點五分。訪談要分別問知情者和病人，大約三十分鐘，所以需要訓練，不是看分數換算。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="CDR 計分">
+<div class="k-head">
+<h2>記憶定錨、其餘多數決；SB 把六格相加</h2>
+<p class="k-sub">Global CDR 用來分期，CDR-SB 用來追蹤</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-g1"><div class="k-card navy" data-s="1"><h3>規則 1：≥3 項與 M 相同</h3><p>CDR＝M</p></div><div class="k-card sage" data-s="2"><h3>規則 2：多數偏同一側</h3><p>取多數；3 比 2 分兩側則＝M</p></div><div class="k-card terra" data-s="3"><h3>特例</h3><p>M＝0.5 且 ≥3 項 ≥1：CDR＝1</p></div></div></div><table class="k-table"><tr><th>CDR-SB</th><th>分期</th></tr><tr data-s="4"><td class="k-item">0</td><td>正常</td></tr><tr data-s="4"><td class="k-item">0.5–4.0</td><td>疑似／極輕度</td></tr><tr data-s="4"><td class="k-item">4.5–9.0</td><td>輕度失智</td></tr><tr data-s="4"><td class="k-item">9.5–15.5</td><td>中度失智</td></tr><tr data-s="4"><td class="k-item">16–18</td><td>重度失智</td></tr></table></div>
+<p class="k-take">分數重疊時，仍回到 IADL 是否需要他人接手</p>
+<p class="k-cite">出處：Morris 1993 PMID 8232972｜O'Bryant SE, et al. Arch Neurol 2008;65:1091–5. PMID 18695059</p>
+</div>
+<template class="k-narr">
+<p data-step="0">計分有三條規則。</p>
+<p data-step="1">三項以上和記憶相同，就等於記憶分數。</p>
+<p data-step="2">否則取多數那一側。</p>
+<p data-step="3">還有兩個特例要記。</p>
+<p data-step="4">CDR-SB 把六格相加，適合追蹤細微變化。</p>
+<p data-step="4">Global CDR 用來分期，CDR-SB 用來追蹤，一年半分的變化也看得到。零點五到四分同時涵蓋 MCI 和極輕度失智，所以分數重疊時，還是回到功能。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="CDR 算分">
+<div class="k-head">
+<h2>林先生的 CDR：先算再揭曉</h2>
+<p class="k-sub">M＝0.5；五項次要向度依序為 0.5、0.5、0.5、0、0</p>
+</div>
+<div class="k-body">
+<div class="k-g3"><div class="k-card navy" data-s="1"><p class="k-no">0.5</p><h3>記憶</h3><p>近事遺忘，提示有幫助</p></div><div class="k-card sage" data-s="1"><p class="k-no">0.5</p><h3>定向</h3><p>熟悉地點迷路一次</p></div><div class="k-card terra" data-s="1"><p class="k-no">0.5</p><h3>判斷</h3><p>帳單出錯、受推銷影響</p></div><div class="k-card butter" data-s="1"><p class="k-no">0.5</p><h3>社區事務</h3><p>社團需女兒陪同</p></div><div class="k-card navy" data-s="1"><p class="k-no">0</p><h3>家居嗜好</h3><p>大致維持</p></div><div class="k-card sage" data-s="1"><p class="k-no">0</p><h3>個人照顧</h3><p>完全自理</p></div></div><div class="k-res" data-s="2">Global CDR＝0.5（3 項次要向度與 M 相同）｜CDR-SB＝2.0（疑似／極輕度）</div>
+<p class="k-take">記錄基準：CDR 0.5、CDR-SB 2.0</p>
+<p class="k-cite">出處：Morris 1993 PMID 8232972｜O'Bryant 2008 PMID 18695059；教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">請大家自己算林先生的 CDR。</p>
+<p data-step="1">記憶、定向、判斷、社區都是零點五，家居和個人照顧是零。</p>
+<p data-step="2">三項次要向度和記憶相同，所以 Global CDR 是零點五，六格相加是二點零。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="分期" data-title="決策點 3">
+<div class="k-head">
+<h2>決策點 3：MCI，還是輕度失智？</h2>
+<p class="k-sub">CDR 0.5、CDR-SB 2.0；IADL 有失誤但提醒後仍能完成；ADL 6／6</p>
+</div>
+<div class="k-body">
+<div class="k-opts k-opts2"><button class="k-opt bad" data-reveal="1"><span class="k-letter">A</span><span><span class="k-say">輕度失智，因為 MoCA 低於 26</span><span class="k-fb"><strong class="k-t">✗ 分數不決定分期</strong>：分界是日常功能</span></span></button><button class="k-opt good" data-reveal="2"><span class="k-letter">B</span><span><span class="k-say">MCI：IADL 有失誤但仍能獨立完成</span><span class="k-fb"><strong class="k-s">✓ 正解</strong>：2024 AA 臨床 Stage 3；若女兒必須接手，改判 Stage 4</span></span></button><button class="k-opt bad" data-reveal="3"><span class="k-letter">C</span><span><span class="k-say">正常老化，MMSE 27 分</span><span class="k-fb"><strong class="k-t">✗</strong>：AD8、MoCA 與知情者都顯示持續改變</span></span></button><button class="k-opt bad" data-reveal="4"><span class="k-letter">D</span><span><span class="k-say">無法判斷，先抽 p-tau217</span><span class="k-fb"><strong class="k-t">✗ 問錯問題</strong>：病因回答為什麼，不回答多嚴重</span></span></button></div>
+<p class="k-take">灰色地帶要講清楚：判斷會隨「誰接手」而改變</p>
+<p class="k-cite">出處：Jack CR Jr, et al. Alzheimers Dement 2024;20:5143–69. PMID 38934362｜O'Bryant 2008 PMID 18695059</p>
+</div>
+<template class="k-narr">
+<p data-step="0">林先生是 MCI，還是輕度失智？</p>
+<p data-step="1">選 A 不對，分數不決定分期。</p>
+<p data-step="2">正解是 B，MCI。但如果女兒已經必須接手財務和用藥，就要改判輕度失智。</p>
+<p data-step="3">選 C 也不對，改變是持續的。</p>
+<p data-step="4">選 D 問錯問題，病因回答為什麼，不回答多嚴重。</p>
+</template>
+</section>
+<section class="k-slide k-chap" data-chapter="標記" data-nonav="1" data-title="03 生物標記">
+<div class="k-ch-l">
+<p class="k-ch-no" style="color:#5B3FA0">03</p>
+<h2>生物標記</h2>
+<p class="k-ch-en">ETIOLOGY AND BIOMARKERS</p>
+<ol><li data-s="1"><b style="background:#5B3FA0">1</b>2024 準則：生物學與臨床分期是兩條軸</li><li data-s="1"><b style="background:#5B3FA0">2</b>FDA 已許可四支血液檢測</li><li data-s="1"><b style="background:#5B3FA0">3</b>判讀：三區結果與前測機率</li><li data-s="1"><b style="background:#5B3FA0">4</b>不驗無症狀者；p-tau217 也有極限</li></ol>
+</div>
+<div class="k-ch-r"><img alt="" src="assets/ill/ill_biomarker_tiers.png"/><p class="k-gencap">AI 生成示意</p></div>
+<template class="k-narr">
+<p data-step="0">第三站。林先生已確認是以記憶為主的 MCI，接著才問病因。</p>
+<p data-step="1">這一章變動最大，二零二五到二零二六年，血液檢測進展很快。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="2024 準則">
+<div class="k-head">
+<h2>生物學定義與臨床分期是兩條獨立的軸</h2>
+<p class="k-sub">2024 Alzheimer's Association 修訂準則</p>
+</div>
+<div class="k-body">
+<div class="k-split2 k-s64"><div class="k-col1"><table class="k-table"><tr><th>類別</th><th>代表標記</th><th>用途</th></tr><tr data-s="1"><td class="k-item">Core 1</td><td>Amyloid PET、CSF 比值、準確的血漿 p-tau217</td><td>定義 AD 生物學</td></tr><tr data-s="2"><td class="k-item">Core 2</td><td>Tau PET、其他 tau 片段</td><td>生物學分期、預後</td></tr><tr data-s="3"><td class="k-item">非特異</td><td>NfL、GFAP</td><td>神經退化、發炎</td></tr><tr data-s="4"><td class="k-item">共病理</td><td>MRI 血管病變、α-synuclein</td><td>混合病理</td></tr></table></div><table class="k-table"><tr><th>臨床分期</th><th>狀態</th></tr><tr data-s="5"><td class="k-item">Stage 1–2</td><td>無症狀／輕微變化</td></tr><tr data-s="5"><td class="k-item">Stage 3</td><td>MCI ← 林先生</td></tr><tr data-s="5"><td class="k-item">Stage 4</td><td>輕度失智</td></tr><tr data-s="5"><td class="k-item">Stage 5–6</td><td>中度／重度失智</td></tr></table></div>
+<p class="k-take">完整診斷兩軸都寫：「Core 1 陽性＋臨床 Stage 3」</p>
+<p class="k-cite">出處：Jack CR Jr, et al. Alzheimers Dement 2024;20:5143–69. PMID 38934362。準則不建議對無症狀者檢測</p>
+</div>
+<template class="k-narr">
+<p data-step="0">二零二四年的修訂準則，把生物學和臨床分期分開。</p>
+<p data-step="1">Core 1 標記定義 AD 生物學，包含準確的血漿 p-tau217。</p>
+<p data-step="2">Core 2 用於分期和預後。</p>
+<p data-step="3">NfL 和 GFAP 不具特異性。</p>
+<p data-step="4">血管和 synuclein 代表共病理。</p>
+<p data-step="5">臨床分期另外評估，林先生是 Stage 3。</p>
+<p data-step="5">完整的診斷要兩軸都寫，例如類澱粉陽性，加上臨床第三期。這個準則不建議檢測沒有症狀的人。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="三層使用">
+<div class="k-head">
+<h2>生物標記分三層，臨床評估在最底層</h2>
+<p class="k-sub">往上一層前先問：這個結果會改變治療或諮詢嗎？</p>
+</div>
+<div class="k-body">
+<div class="k-tiers"><div class="k-tier k-t3" data-s="3"><b>3</b><div><h3>CSF／amyloid PET</h3><p>確認病因：考慮抗類澱粉治療、血液結果中間區或衝突</p></div></div><div class="k-tier k-t2" data-s="2"><b>2</b><div><h3>血液標記（p-tau217 等）</h3><p>分流：依前測機率判讀，平台與切點不可互換</p></div></div><div class="k-tier k-t1" data-s="1"><b>1</b><div><h3>完整臨床評估</h3><p>病史、知情者、功能、神經檢查、檢驗、MRI：每位病人都要</p></div></div></div>
+<p class="k-take">結果不會改變處置，就先不做</p>
+<p class="k-cite">出處：Atri A, et al. Alzheimers Dement 2025;21:e14333. PMID 39713942｜Palmqvist S, et al. Alzheimers Dement 2025;21:e70535. PMID 40729527</p>
+</div>
+<template class="k-narr">
+<p data-step="0">生物標記要分層使用。</p>
+<p data-step="1">最底層是完整臨床評估，每個人都要。</p>
+<p data-step="2">第二層是血液標記，用來分流。</p>
+<p data-step="3">第三層是 CSF 或 PET，回答確認問題。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="為何需要">
+<div class="k-head">
+<h2>只靠臨床，病因判斷常常不準</h2>
+<p class="k-sub">瑞典前瞻研究 n=1,213；血液檢測 APS2（%p-tau217＋Aβ42/40）</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-hbars"><div class="k-hbr" data-s="1"><span class="k-hbl">基層醫師臨床判斷</span><span class="k-hbt"><span class="k-hbf" style="width:61.0%;background:#8A96A3"></span></span><span class="k-hbv">61%</span></div><div class="k-hbr" data-s="1"><span class="k-hbl">基層族群血液檢測</span><span class="k-hbt"><span class="k-hbf" style="width:91.0%;background:#5B3FA0"></span></span><span class="k-hbv">91%</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">專科醫師臨床判斷</span><span class="k-hbt"><span class="k-hbf" style="width:73.0%;background:#8A96A3"></span></span><span class="k-hbv">73%</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">專科族群血液檢測</span><span class="k-hbt"><span class="k-hbf" style="width:91.0%;background:#5B3FA0"></span></span><span class="k-hbv">91%</span></div></div></div><div class="k-g1"><div class="k-card navy" data-s="3"><h3>限制</h3><p>AD 病理約 50% 的族群、特定質譜檢測；不可直接套用到其他平台</p></div></div></div>
+<p class="k-take">臨床判斷有天花板，血液標記補上「病因」這一塊</p>
+<p class="k-cite">出處：Palmqvist S, et al. JAMA 2024;332:1245–57. PMID 39068545</p>
+</div>
+<template class="k-narr">
+<p data-step="0">為什麼需要生物標記？</p>
+<p data-step="1">瑞典研究裡，基層醫師判斷 AD 的準確度六成一，血液檢測九成一。</p>
+<p data-step="2">專科醫師七成三，血液檢測一樣九成一。</p>
+<p data-step="3">但這是特定檢測和族群，不能直接套用到所有平台。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="AA 2025 指引">
+<div class="k-head">
+<h2>AA 2025：先看檢測達到哪一道門檻</h2>
+<p class="k-sub">適用：專科記憶門診、已有客觀認知障礙、懷疑 AD</p>
+</div>
+<div class="k-body">
+<div class="k-g3"><div class="k-card navy" data-s="1"><p class="k-no">分流</p><h3>敏感度 ≥90%＋特異度 ≥75%</h3><p>陰性可合理排除；陽性仍需 CSF 或 PET 確認</p></div><div class="k-card sage" data-s="2"><p class="k-no">確認</p><h3>敏感度、特異度皆 ≥90%</h3><p>可取代 amyloid PET 或 CSF</p></div><div class="k-card terra" data-s="3"><p class="k-no">提醒</p><h3>許多市售檢測達不到門檻</h3><p>尤其只用單一切點時；基層另有獨立指引流程</p></div></div>
+<p class="k-take">血液標記是完整評估的一部分，不是健檢項目</p>
+<p class="k-cite">出處：Palmqvist S, et al. Alzheimers Dement 2025;21:e70535. PMID 40729527（本指引以專科為主，基層將另行制定）</p>
+</div>
+<template class="k-narr">
+<p data-step="0">二零二五年阿茲海默症協會的指引，定了兩道門檻。</p>
+<p data-step="1">分流級，敏感度九成、特異度七成五，陽性還要確認。</p>
+<p data-step="2">確認級兩者都要九成，才能取代 PET 或 CSF。</p>
+<p data-step="3">許多市售檢測達不到，而且這份指引以專科為主，基層會另外訂定。</p>
+<p data-step="3">請記住一句話：血液標記是完整評估的一部分，不是健檢項目，也不能取代臨床診斷。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="FDA 時間線">
+<div class="k-head">
+<h2>FDA 已許可四支血液檢測</h2>
+<p class="k-sub">2025-05 至 2026-08；用途、年齡與場域都不一樣</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>日期</th><th>檢測</th><th>適用</th><th>定位</th></tr><tr data-s="1"><td class="k-item">2025-05-16</td><td>Lumipulse pTau217／Aβ42</td><td>≥50 歲、專科場域</td><td>比值、三區</td></tr><tr data-s="2"><td class="k-item">2025-10-08</td><td>Elecsys pTau181</td><td>≥55 歲、基層</td><td>排除為主</td></tr><tr data-s="3"><td class="k-item">2026-08-19</td><td>Elecsys pTau217</td><td>≥55 歲</td><td>納入與排除、三區</td></tr><tr data-s="4"><td class="k-item">2026-08</td><td>PrecivityAD2</td><td>≥40 歲</td><td>質譜；配合臨床評估</td></tr></table>
+<p class="k-take">台灣截至 2026-11 未見健保給付項目；平台與切點依檢驗室而異</p>
+<p class="k-cite">出處：FDA 510(k) K242706、K252163、K261686 Decision Summary｜PrecivityAD2：C2N／ADDF 公告 2026-08-20（未取得 FDA 文件）｜台灣現況查核日 2026-11-06</p>
+</div>
+<template class="k-narr">
+<p data-step="0">到今年八月，FDA 已經許可四支血液檢測。</p>
+<p data-step="1">第一支 Lumipulse，限五十歲以上、專科場域。</p>
+<p data-step="2">Elecsys pTau181，用在基層，主要是排除。</p>
+<p data-step="3">Elecsys pTau217，今年八月許可。</p>
+<p data-step="4">PrecivityAD2 是質譜法，年齡放寬到四十歲。各支的用途不同，不能互換。</p>
+<p data-step="4">台灣目前以自費為主，平台和切點因檢驗室而異。到今年十一月，我沒有查到健保給付項目。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="Elecsys pTau217">
+<div class="k-head">
+<h2>血液檢測有三種結果，不是二選一</h2>
+<p class="k-sub">FDA 2026-08-19 許可 Elecsys pTau217｜55 歲以上、有認知症狀者；958 人對照類澱粉 PET</p>
+</div>
+<div class="k-body">
+<div class="k-split2">
+<div class="k-zones">
+<div class="k-zone k-zneg" data-s="1">
+<p class="k-zl">陰性 ≤0.223 pg/mL</p>
+<p class="k-zv">NPV 95.3%</p>
+<p class="k-zd">佔 46.5%；PET 陽性僅 4.7%。要回頭找其他病因</p>
+</div>
+<div class="k-zone k-zmid" data-s="2">
+<p class="k-zl">中間區 &gt;0.223–0.378</p>
+<p class="k-zv">PET 陽性 37.7%</p>
+<p class="k-zd">佔 19.9%；約五人一人。無法判定，建議進一步檢查</p>
+</div>
+<div class="k-zone k-zpos" data-s="3">
+<p class="k-zl">陽性 &gt;0.378 pg/mL</p>
+<p class="k-zv">PET 陽性 88.5%</p>
+<p class="k-zd">佔 33.6%；仍不等於診斷，要回到臨床評估</p>
+</div>
+</div>
+<div class="k-lit" data-s="4">
+<div class="k-litbox"><img alt="FDA K261686 決定摘要的三區判讀表" src="assets/shots/crop_fda_k261686_cutoffs.png"/></div>
+<p class="k-litcap"><span class="k-badge">美國政府文件</span> <b>原文截圖</b>：FDA 510(k) K261686 Decision Summary, p.4；基層低盛行率時 PPV 會較低</p>
+</div>
+</div>
+<p class="k-take">先講好中間區怎麼辦：五人約有一人落在這裡</p>
+<p class="k-cite">出處：FDA 510(k) K261686, Elecsys Phospho-Tau (217P) Plasma, Decision Summary（決定日 2026-08-19），https://www.accessdata.fda.gov/cdrh_docs/reviews/K261686.pdf；查核日 2026-11-06。PV＝對照 PET 的預測值，本研究 PET 陽性 39.5%（378／958）</p>
+</div>
+<template class="k-narr">
+<p data-step="0">二零二六年八月，FDA 許可了 Elecsys pTau217，用在五十五歲以上、有認知症狀的人。</p>
+<p data-step="1">結果分三區。陰性佔四成六，其中只有百分之四點七 PET 是陽性，這時要回頭找其他病因。</p>
+<p data-step="2">中間區佔兩成，大約五個人就有一個，PET 陽性三成八，無法判定，要再檢查。</p>
+<p data-step="3">陽性佔三成四，PET 陽性八成八，但仍然不等於診斷。</p>
+<p data-step="4">這是 FDA 文件的原表。它特別提醒，基層的盛行率較低，陽性預測值也會比較低。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="pTau181 排除">
+<div class="k-head">
+<h2>基層排除工具：NPV 高、PPV 低</h2>
+<p class="k-sub">FDA K252163：Elecsys pTau181，312 位基層受試者，PET 陽性 13.1%（41／312）</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-kpis"><div class="k-kpi k-good" data-s="1"><p class="k-kl">陰性預測值 NPV</p><p class="k-kv">97.9%</p><p class="k-kd">139／142：陰性可合理排除</p></div><div class="k-kpi k-warn2" data-s="2"><p class="k-kl">陽性預測值 PPV</p><p class="k-kv">22.4%</p><p class="k-kd">38／170：陽性多半不是</p></div></div></div><div class="k-g1"><div class="k-card navy" data-s="3"><h3>怎麼用</h3><p>陰性：回頭找其他病因</p></div><div class="k-card sage" data-s="3"><h3>不能怎麼用</h3><p>陽性不能當診斷，要進一步確認</p></div></div></div>
+<p class="k-take">基層的陽性多半是轉介理由，不是診斷</p>
+<p class="k-cite">出處：FDA 510(k) K252163, Elecsys Phospho-Tau (181P) Plasma, Decision Summary（決定日 2025-10-08），https://www.accessdata.fda.gov/cdrh_docs/reviews/K252163.pdf ；查核日 2026-11-06</p>
+</div>
+<template class="k-narr">
+<p data-step="0">再看基層用的 pTau181，基層 PET 陽性只有一成三。</p>
+<p data-step="1">陰性預測值九成八，陰性可以合理排除。</p>
+<p data-step="2">陽性預測值只有兩成二，陽性多半不是。</p>
+<p data-step="3">所以在基層，陽性是轉介的理由，不是診斷。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="BioFINDER 基層">
+<div class="k-head">
+<h2>基層醫師看到血液結果後，準確度追上專科</h2>
+<p class="k-sub">BioFINDER-Primary Care 期中結果：1,310 位 MCI 或失智（基層 383、專科 927）</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-hbars"><div class="k-hbr" data-s="1"><span class="k-hbl">基層：看結果前</span><span class="k-hbt"><span class="k-hbf" style="width:65.0%;background:#8A96A3"></span></span><span class="k-hbv">65%</span></div><div class="k-hbr" data-s="1"><span class="k-hbl">基層：看結果後</span><span class="k-hbt"><span class="k-hbf" style="width:93.0%;background:#5B3FA0"></span></span><span class="k-hbv">93%</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">專科：看結果前</span><span class="k-hbt"><span class="k-hbf" style="width:74.0%;background:#8A96A3"></span></span><span class="k-hbv">74%</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">專科：看結果後</span><span class="k-hbt"><span class="k-hbf" style="width:89.0%;background:#24476E"></span></span><span class="k-hbv">89%</span></div></div></div><div class="k-pubshow" data-s="3"><div class="k-g1"><div class="k-card navy" data-s="3"><h3>頭對頭比較</h3><p>同一批基層病人：專科 94%、基層 93%</p></div><div class="k-card sage" data-s="3"><h3>改變處置</h3><p>約三分之一病人診斷改變</p></div></div></div></div>
+<p class="k-take">會議期中結果，未經同儕審查；基層最有用的是排除</p>
+<p class="k-cite">出處：Alzheimer's Association. AAIC 2026 press release, 2026-07-14, https://aaic.alz.org/downloads2026/Bloodbiomarkers.pdf ；檢測為 PrecivityAD2</p>
+</div>
+<template class="k-narr">
+<p data-step="0">今年七月 AAIC 公佈了基層的真實世界研究。</p>
+<p data-step="1">基層醫師看到血液結果後，準確度由六成五升到九成三。</p>
+<p data-step="2">專科由七成四升到八成九。</p>
+<p data-step="3">但這是會議的期中結果，還沒有同儕審查。基層最有用的是排除。</p>
+<p data-step="3">基層醫師對陽性結果仍然保守，傾向轉介專科確認，這是合理的做法。看到結果後，醫師改變了約三分之一病人的診斷。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="前測機率">
+<div class="k-head">
+<h2>同一支檢測，換個場域就變了</h2>
+<p class="k-sub">每 1,000 人、分流級檢測（敏感度 90%、特異度 75%）；點選前測機率比較</p>
+</div>
+<div class="k-body">
+<div class="k-tabs"><button data-step-btn="1">低風險 10%</button><button data-step-btn="2">基層 21%</button><button data-step-btn="3">專科 50%</button></div>
+<div class="k-pt" data-s="1" data-sto="1">
+<div class="k-ptbar"><span class="k-tp" style="flex:90">真陽 90</span><span class="k-fp" style="flex:225">假陽 225</span></div>
+<div class="k-ptnum"><div><b>29%</b><span>陽性預測值 PPV</span></div><div><b>98.5%</b><span>陰性預測值 NPV</span></div><p>陽性者每 10 人約 7 人是假警報：這是不拿來做健檢的原因</p></div>
+</div>
+<div class="k-pt k-alt" data-s="2" data-sto="2">
+<div class="k-ptbar"><span class="k-tp" style="flex:189">真陽 189</span><span class="k-fp" style="flex:198">假陽 198</span></div>
+<div class="k-ptnum"><div><b>49%</b><span>陽性預測值 PPV</span></div><div><b>96.6%</b><span>陰性預測值 NPV</span></div><p>21% 取自 FDA 資料的基層 PET 陽性率（41／194）：陽性約一半要再確認</p></div>
+</div>
+<div class="k-pt k-alt" data-s="3">
+<div class="k-ptbar"><span class="k-tp" style="flex:450">真陽 450</span><span class="k-fp" style="flex:125">假陽 125</span></div>
+<div class="k-ptnum"><div><b>78%</b><span>陽性預測值 PPV</span></div><div><b>88.2%</b><span>陰性預測值 NPV</span></div><p>50% 取自同資料的次級與三級照護（245／493）：陽性較可信，陰性反而要小心</p></div>
+</div>
+<p class="k-take">開單前先估前測機率，才知道結果能不能信</p>
+<p class="k-cite">出處：作者依貝氏定理計算之示例，非特定檢測實測值；門檻依 Palmqvist S, et al. Alzheimers Dement 2025;21:e70535. PMID 40729527；前測比例取自 FDA K261686 Decision Summary p.21（21.1%、49.7%）</p>
+</div>
+<template class="k-narr">
+<p data-step="0">接下來用一千個人來算。檢測規格固定，敏感度九成，特異度七成五。</p>
+<p data-step="1">前測機率百分之十時，真陽九十人，假陽兩百二十五人。陽性預測值只有兩成九，所以不拿來做健檢。</p>
+<p data-step="2">換到基層，前測機率約百分之二十一，陽性裡大約一半是真的。</p>
+<p data-step="3">到專科門診，前測機率百分之五十，陽性預測值七成八，但陰性預測值掉到八成八。同一支檢測，換個場域，意義就變了。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="不驗無症狀">
+<div class="k-head">
+<h2>p-tau217 測得到，不代表該驗</h2>
+<p class="k-sub">無症狀者與 80 歲以上：兩個最常被問的情境</p>
+</div>
+<div class="k-body">
+<div class="k-g2"><div class="k-card navy" data-s="1"><h3>無認知障礙者</h3><p>18 篇、7,834 人：辨識類澱粉陽性 AUC 0.87（95% CI 0.85–0.90）</p></div><div class="k-card sage" data-s="2"><h3>但目前的適用對象</h3><p>FDA 許可與 AA 指引都限有症狀者；陽性無法告訴你何時發病</p></div><div class="k-card terra" data-s="3"><h3>≥80 歲 MCI</h3><p>n=167：p-tau217 判斷 AD 生物學 AUC 0.93（0.88–0.98）；69% 具 AD 生物學</p></div><div class="k-card butter" data-s="4"><h3>高齡的意義</h3><p>年齡大不代表沒有判讀價值，但要連結照護決策</p></div></div>
+<p class="k-take">會驗不等於該驗：沒有症狀，就不是檢測的適應症</p>
+<p class="k-cite">出處：Malek-Ahmadi M, et al. JAMA Neurol 2026;83:13–19. PMID 41324928｜Ceriello C, et al. Neurology 2026;107:e218180. PMID 42308436｜Palmqvist S, et al. Alzheimers Dement 2025;21:e70535. PMID 40729527｜FDA K261686</p>
+</div>
+<template class="k-narr">
+<p data-step="0">家屬常問兩件事。</p>
+<p data-step="1">沒有症狀能不能驗？統合分析顯示測得到，AUC 零點八七。</p>
+<p data-step="2">但 FDA 和指引都限有症狀的人，陽性也無法告訴你何時發病。</p>
+<p data-step="3">八十歲以上呢？巴塞隆納的研究，AUC 仍有零點九三。</p>
+<p data-step="4">所以年齡不是拒絕的理由，但要能連結到照護決策。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="p-tau217 極限">
+<div class="k-head">
+<h2>p-tau217 擅長判斷類澱粉，不是萬能</h2>
+<p class="k-sub">AUC：0.5 是丟銅板，1.0 是完美</p>
+</div>
+<div class="k-body">
+<div class="k-hbars"><div class="k-hbr" data-s="1"><span class="k-hbl">類澱粉陽性（Taiwan-ADNI）</span><span class="k-hbt"><span class="k-hbf" style="width:94.0%;background:#3F7A55"></span></span><span class="k-hbv">0.94</span></div><div class="k-hbr" data-s="1"><span class="k-hbl">類澱粉陽性（ADNI 市售檢測）</span><span class="k-hbt"><span class="k-hbf" style="width:88.0%;background:#3F7A55"></span></span><span class="k-hbv">0.85–0.91</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">tau 晚期 vs 早期</span><span class="k-hbt"><span class="k-hbf" style="width:73.0%;background:#B45309"></span></span><span class="k-hbv">0.69–0.77</span></div><div class="k-hbr" data-s="3"><span class="k-hbl">donanemab 後類澱粉清除</span><span class="k-hbt"><span class="k-hbf" style="width:61.0%;background:#C2410C"></span></span><span class="k-hbv">0.61</span></div></div>
+<p class="k-take">適合回答有沒有類澱粉，不適合回答 tau 到哪一期或治療後清乾淨沒</p>
+<p class="k-cite">出處：Huang KL, et al. Alzheimers Dement 2025;21:e14297. PMID 39777990｜Chen Y, et al. J Neurol 2026;273. PMID 41784652｜Collins EC, et al. Alzheimers Dement 2026;22:e71740. PMID 42565262</p>
+</div>
+<template class="k-narr">
+<p data-step="0">p-tau217 也有極限。</p>
+<p data-step="1">判斷有沒有類澱粉，表現很好。</p>
+<p data-step="2">區分 tau 早晚期就掉到零點七左右。</p>
+<p data-step="3">偵測 donanemab 治療後的清除只有零點六一。要記得判讀時也要考慮腎功能這類共病。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="Taiwan-ADNI">
+<div class="k-head">
+<h2>台灣數據：先抽血，需要時再做 PET</h2>
+<p class="k-sub">長庚 Taiwan-ADNI：兩個醫學中心、n=361</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-flow2"><p data-s="1">疑似 AD 的客觀認知障礙，完成評估與 MRI</p><p data-s="1">血漿 p-tau217：依檢驗室切點分流</p><p data-s="2">Amyloid PET：只給需要的人</p><p data-s="2">治療評估：合併臨床參數預測 tau</p></div></div><div class="k-kpis"><div class="k-kpi k-good" data-s="3"><p class="k-kl">p-tau217 對 amyloid PET</p><p class="k-kv">AUC 0.94</p><p class="k-kd">所有血漿標記中一致性最高</p></div><div class="k-kpi k-neu" data-s="3"><p class="k-kl">可減少的確認性 PET</p><p class="k-kv">−57.5%</p><p class="k-kd">切點依平台與檢驗室而異</p></div></div></div>
+<p class="k-take">兩階段流程可以少做近六成確認掃描；切點不能直接套用到每家醫院</p>
+<p class="k-cite">出處：Huang KL, et al. Alzheimers Dement 2025;21:e14297. PMID 39777990</p>
+</div>
+<template class="k-narr">
+<p data-step="0">台灣也有自己的數據。</p>
+<p data-step="1">流程是先完成評估，再抽血分流。</p>
+<p data-step="2">PET 只給需要的人。</p>
+<p data-step="3">AUC 零點九四，可以少做百分之五十七點五的確認掃描。但這是研究族群，切點不能直接套用。</p>
+<p data-step="3">對打算接受抗類澱粉治療的人，p-tau217 合併臨床參數，也最能預測 tau 負擔。這是我們自己族群的資料。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="標記" data-title="林先生下一步">
+<div class="k-head">
+<h2>林先生要不要抽血？</h2>
+<p class="k-sub">MCI、記憶型、MTA 2、家族史：前測機率高，結果會影響轉介與諮詢</p>
+</div>
+<div class="k-body">
+<div class="k-g3"><div class="k-card navy" data-s="1"><h3>PGY 能做的</h3><p>完成臨床評估、檢驗、MRI、安全 CGA</p></div><div class="k-card sage" data-s="2"><h3>轉記憶門診討論</h3><p>血液標記、PET 或 CSF、APOE 諮詢</p></div><div class="k-card terra" data-s="3"><h3>檢測前先講</h3><p>自費、可能落在中間區、陽性不等於確診</p></div></div>
+<p class="k-take">血液檢測是專科判讀的一環：開單前先說好三種結果怎麼處理</p>
+<p class="k-cite">出處：Palmqvist S, et al. Alzheimers Dement 2025;21:e70535. PMID 40729527｜FDA K261686；教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">回到林先生，他要不要抽血？</p>
+<p data-step="1">PGY 先完成臨床評估。</p>
+<p data-step="2">再轉記憶門診討論血液標記、PET 和基因諮詢。</p>
+<p data-step="3">檢測之前先講好：自費、可能落在中間區、陽性也不等於確診。</p>
+</template>
+</section>
+<section class="k-slide k-chap" data-chapter="治療" data-nonav="1" data-title="04 治療決策">
+<div class="k-ch-l">
+<p class="k-ch-no" style="color:#B45309">04</p>
+<h2>治療決策</h2>
+<p class="k-ch-en">TREATMENT DECISIONS</p>
+<ol><li data-s="1"><b style="background:#B45309">1</b>MCI 不常規用乙醯膽鹼酯酶抑制劑</li><li data-s="1"><b style="background:#B45309">2</b>抗類澱粉抗體：效果有限、風險明確</li><li data-s="1"><b style="background:#B45309">3</b>ARIA：依 APOE 與 MRI 監測</li><li data-s="1"><b style="background:#B45309">4</b>急診：中風樣症狀先想 ARIA</li><li data-s="1"><b style="background:#B45309">5</b>BPSD：先找原因、非藥物優先</li></ol>
+</div>
+<div class="k-ch-r"><img alt="" src="assets/ill/ill_care_loop.png"/><p class="k-gencap">AI 生成示意</p></div>
+<template class="k-narr">
+<p data-step="0">第四站，談治療。PGY 的角色不是開抗類澱粉抗體。</p>
+<p data-step="1">而是知道誰該轉介，怎麼和家屬談期待，以及在急診認得 ARIA。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="症狀藥物">
+<div class="k-head">
+<h2>症狀治療：適應症、滴定與安全</h2>
+<p class="k-sub">林先生是 MCI：不常規開 AChEI；家屬詢問時先說明證據不足</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>藥物</th><th>起始 → 目標</th><th>常見問題</th><th>注意</th></tr><tr data-s="1"><td class="k-item">Donepezil</td><td>5 mg 睡前 → 4–6 週後 10 mg</td><td>噁心、腹瀉、惡夢</td><td>心搏過緩、暈厥</td></tr><tr data-s="2"><td class="k-item">Rivastigmine</td><td>貼片 4.6 → 9.5 mg／24h</td><td>腸胃、皮膚刺激</td><td>也用於巴金森失智</td></tr><tr data-s="3"><td class="k-item">Galantamine</td><td>緩釋 8 → 16–24 mg</td><td>腸胃、體重下降</td><td>腎肝功能調整</td></tr><tr data-s="4"><td class="k-item">Memantine</td><td>5 mg → 每週加至 20 mg</td><td>頭暈、便秘</td><td>腎功能調整；中重度</td></tr></table>
+<p class="k-take">健保現行：輕至中度 AD，MMSE 10–26 或 CDR 1–2；以健保署最新公告為準</p>
+<p class="k-cite">出處：Petersen RC, et al. Neurology 2018;90:126–35. PMID 29282327（retired）｜健保署藥品給付規定 1.3.3；查核日 2026-11-06</p>
+</div>
+<template class="k-narr">
+<p data-step="0">先看症狀藥物。MCI 沒有高品質證據支持用藥。</p>
+<p data-step="1">Donepezil 睡前吃，要注意心搏過緩和暈厥，開藥前看心跳和心電圖。</p>
+<p data-step="2">Rivastigmine 經皮劑型的腸胃副作用比較少。</p>
+<p data-step="3">Galantamine 要注意腎肝功能。</p>
+<p data-step="4">Memantine 用在中重度，腎功能要調整。</p>
+<p data-step="4">美國神經學會的指引說，MCI 可以選擇不開乙醯膽鹼酯酶抑制劑。如果要開，必須先說明缺乏證據。健保給付規定，請以健保署最新公告為準。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="試驗結果">
+<div class="k-head">
+<h2>抗類澱粉抗體：統計顯著，效果量小</h2>
+<p class="k-sub">Clarity AD 與 TRAILBLAZER-ALZ 2</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><table class="k-table"><tr><th></th><th>Lecanemab</th><th>Donanemab</th></tr><tr data-s="1"><td class="k-item">人數／期間</td><td>1,795 人／18 個月</td><td>1,736 人／76 週</td></tr><tr data-s="2"><td class="k-item">CDR-SB</td><td>1.21 vs 1.66，差 −0.45</td><td>減緩 36%（低中 tau）、29%（合併）</td></tr><tr data-s="3"><td class="k-item">ARIA-E</td><td>12.6%（有症狀 2.8%）</td><td>24.4%（合併分析）</td></tr></table></div><div class="k-pubshow" data-s="4"><div class="k-hbars"><div class="k-hbr" data-s="4"><span class="k-hbl">安慰劑 18 個月 CDR-SB 惡化</span><span class="k-hbt"><span class="k-hbf" style="width:83.0%;background:#8A96A3"></span></span><span class="k-hbv">1.66</span></div><div class="k-hbr" data-s="4"><span class="k-hbl">Lecanemab</span><span class="k-hbt"><span class="k-hbf" style="width:60.5%;background:#3F7A55"></span></span><span class="k-hbv">1.21</span></div></div><p class="k-litcap">依原文數據重繪（van Dyck 2023）</p></div></div>
+<p class="k-take">減緩，不是恢復：18 個月 CDR-SB 差 0.45</p>
+<p class="k-cite">出處：van Dyck CH, et al. N Engl J Med 2023;388:9–21. PMID 36449413｜Sims JR, et al. JAMA 2023;330:512–27. PMID 37459141｜Cummings J, et al. J Prev Alz Dis 2023;10:362–77. PMID 37357276｜Rabinovici GD, et al. J Prev Alz Dis 2025;12:100150. PMID 40155270</p>
+</div>
+<template class="k-narr">
+<p data-step="0">再看抗類澱粉抗體。</p>
+<p data-step="1">兩個第三期試驗都有一千七百多人。</p>
+<p data-step="2">Lecanemab 十八個月 CDR-SB 差零點四五。donanemab 減緩約三成。</p>
+<p data-step="3">ARIA-E 分別約一成三和兩成四。</p>
+<p data-step="4">這是主要結果，兩組有分開，但差距不大。</p>
+<p data-step="4">Lecanemab 的相對減緩大約百分之二十七，這是作者用零點四五除以一點六六算出來的。談效果時，要同時講絕對差異。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="Cochrane 與真實世界">
+<div class="k-head">
+<h2>2026 兩份整合：證據要一起讀</h2>
+<p class="k-sub">Cochrane 納入已停止研發的抗體；真實世界統合沒有對照組</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-kpis"><div class="k-kpi k-neu" data-s="1"><p class="k-kl">Cochrane：17 RCT、20,342 人</p><p class="k-kv">SMD −0.12</p><p class="k-kd">CDR-SB（95% CI −0.24 至 −0.00）：可能幾無差異，低確定性</p></div><div class="k-kpi k-warn2" data-s="2"><p class="k-kl">ARIA-E 增加</p><p class="k-kv">+107／1,000</p><p class="k-kd">中確定性</p></div></div></div><div class="k-kpis"><div class="k-kpi k-good" data-s="3"><p class="k-kl">Lecanemab 真實世界：37 研究</p><p class="k-kv">ARIA-E 6.5%</p><p class="k-kd">美國 10.6%、亞洲 2.5%；有症狀 ARIA 1.3%</p></div><div class="k-kpi" data-s="4"><p class="k-kl">總停藥率</p><p class="k-kv">12.2%</p><p class="k-kd">認知結果沒有對照，無法確認療效</p></div></div></div>
+<p class="k-take">用這個語氣和家屬談：統計有差、效果量小、風險明確</p>
+<p class="k-cite">出處：Nonino F, et al. Cochrane Database Syst Rev 2026;CD016297. PMID 41985900｜Wu Y, et al. J Neurol 2026;273. PMID 42907679（真實世界差異可能受 APOE 篩選影響，見 Shim Y, et al. J Alzheimers Dis 2026;113:1614–8. PMID 42678678）</p>
+</div>
+<template class="k-narr">
+<p data-step="0">今年有兩份重要的整合。</p>
+<p data-step="1">Cochrane 納入十七個試驗，CDR-SB 的標準化差異是負零點一二，低確定性。</p>
+<p data-step="2">ARIA-E 每千人多一百零七例。</p>
+<p data-step="3">真實世界統合三十七篇，ARIA-E 百分之六點五，亞洲較低，但可能和篩選有關。</p>
+<p data-step="4">總停藥率一成二。這些研究沒有對照，不能確認療效。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="ARIA 與 APOE">
+<div class="k-head">
+<h2>ARIA 風險跟著 APOE ε4 劑量上升</h2>
+<p class="k-sub">美國仿單：任何 ARIA 發生率（藥物組）；兩藥試驗族群不同，不宜比較高低</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-hbars"><div class="k-hbr" data-s="1"><span class="k-hbl">Lecanemab 非帶因</span><span class="k-hbt"><span class="k-hbf" style="width:21.7%;background:#8FBF9F"></span></span><span class="k-hbv">13%</span></div><div class="k-hbr" data-s="1"><span class="k-hbl">Lecanemab 雜合子</span><span class="k-hbt"><span class="k-hbf" style="width:31.7%;background:#3F7A55"></span></span><span class="k-hbv">19%</span></div><div class="k-hbr" data-s="1"><span class="k-hbl">Lecanemab 純合子</span><span class="k-hbt"><span class="k-hbf" style="width:75.0%;background:#24476E"></span></span><span class="k-hbv">45%</span></div></div></div><div class="k-hbars"><div class="k-hbr" data-s="2"><span class="k-hbl">Donanemab 非帶因</span><span class="k-hbt"><span class="k-hbf" style="width:41.7%;background:#E3B8A8"></span></span><span class="k-hbv">25%</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">Donanemab 雜合子</span><span class="k-hbt"><span class="k-hbf" style="width:60.0%;background:#B5482F"></span></span><span class="k-hbv">36%</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">Donanemab 純合子</span><span class="k-hbt"><span class="k-hbf" style="width:91.7%;background:#7A2E1C"></span></span><span class="k-hbv">55%</span></div></div></div>
+<p class="k-take">治療前先驗 APOE，先談風險再決定：約 15% AD 病人是 ε4 純合子</p>
+<p class="k-cite">出處：LEQEMBI Prescribing Information, DailyMed SPL 2026-07-21, §5.1｜KISUNLA Prescribing Information, DailyMed SPL 2025-12-30, §5.1（lecanemab 安慰劑 4／9／22%；donanemab 12／13／22%）</p>
+</div>
+<template class="k-narr">
+<p data-step="0">ARIA 的風險跟著 ε4 的數目上升。</p>
+<p data-step="1">Lecanemab 純合子百分之四十五。</p>
+<p data-step="2">Donanemab 純合子百分之五十五。兩藥族群不同，不能比高低。治療前要先驗基因型，並說明風險。</p>
+<p data-step="2">仿單也提醒，如果沒有做基因檢測，仍然可以治療，但就無法知道是不是高風險族群。檢測之前，要先說明結果的意義。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="MRI 時程">
+<div class="k-head">
+<h2>抗類澱粉抗體：最新仿單的 MRI 時程</h2>
+<p class="k-sub">美國 FDA 仿單：Leqembi 2026-07、Kisunla 2025-12；台灣使用時以 TFDA 核定仿單為準</p>
+</div>
+<div class="k-body">
+<div class="k-split2 k-s64">
+<table class="k-cmp">
+<tr><th class="k-rowh"></th><th class="k-lec">Lecanemab</th><th class="k-don">Donanemab</th></tr>
+<tr data-s="1"><td class="k-rh">給藥</td><td>靜脈 10 mg/kg 每 2 週，或皮下 500 mg 每週</td><td>靜脈每 4 週：350→700→1,050→1,400 mg</td></tr>
+<tr data-s="2"><td class="k-rh">MRI</td><td><b>基線＋1、2、3、6 個月</b></td><td><b>基線＋第 2、3、4、7 次前</b></td></tr>
+<tr data-s="3"><td class="k-rh">加強警戒</td><td>前 14 週</td><td>前 24 週</td></tr>
+<tr data-s="4"><td class="k-rh">ε4 純合子</td><td>ARIA 45%（安慰劑 22%）</td><td>ARIA 55%（安慰劑 22%）</td></tr>
+<tr data-s="5"><td class="k-rh">後續</td><td>18 個月後可轉維持劑量</td><td>類澱粉極低時可考慮停藥</td></tr>
+</table>
+<div class="k-lit" data-s="6">
+<div class="k-litbox"><img alt="DailyMed Leqembi 仿單頁面與黑框警語" src="assets/shots/crop_dailymed_leqembi_boxed.png"/></div>
+<p class="k-litcap"><span class="k-badge">美國政府網站</span> <b>官方截圖</b>：DailyMed Leqembi 黑框警語（2026-07-21 版）</p>
+</div>
+</div>
+<p class="k-take">出現頭痛、混亂、視力變化或癲癇：不等排程，先評估並視需要照 MRI</p>
+<p class="k-cite">出處：LEQEMBI／LEQEMBI IQLIK Prescribing Information, DailyMed SPL 2026-07-21, §2.2、2.4、5.1｜KISUNLA Prescribing Information, DailyMed SPL 2025-12-30, §2.2、2.3、5.1；查核日 2026-11-06。兩藥試驗族群不同，不宜直接比較</p>
+</div>
+<template class="k-narr">
+<p data-step="0">這一頁是今年更新過的資料，直接以美國最新仿單為準。</p>
+<p data-step="1">給藥方面，lecanemab 現在除了靜脈注射，也可以每週皮下注射，donanemab 則是逐步加量。</p>
+<p data-step="2">MRI 時程要記新的。lecanemab 是基線加上治療後一、二、三、六個月。donanemab 是第二、三、四、七次輸注之前。</p>
+<p data-step="3">加強警戒期，lecanemab 是前十四週，donanemab 是前二十四週。</p>
+<p data-step="4">ε4 純合子的 ARIA 風險最高，所以治療前要先驗基因型，並說明風險。</p>
+<p data-step="5">後續的處理也不同，一個可以轉維持劑量，一個可以考慮停藥。</p>
+<p data-step="6">這是 DailyMed 上的官方仿單，最上面就是 ARIA 的黑框警語。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="資格清單">
+<div class="k-head">
+<h2>誰可能適合？六項都要成立</h2>
+<p class="k-sub">PGY 的工作：辨識可能的候選人，轉介專科</p>
+</div>
+<div class="k-body">
+<div class="k-g3"><div class="k-card navy" data-s="1"><p class="k-no">✓</p><h3>分期</h3><p>MCI 或輕度失智（Stage 3–4）</p></div><div class="k-card sage" data-s="2"><p class="k-no">✓</p><h3>類澱粉</h3><p>PET 或 CSF 確認</p></div><div class="k-card terra" data-s="3"><p class="k-no">✓</p><h3>MRI</h3><p>近期基線：無排除性病灶</p></div><div class="k-card butter" data-s="4"><p class="k-no">✓</p><h3>出血風險</h3><p>需抗凝者要特別謹慎</p></div><div class="k-card navy" data-s="5"><p class="k-no">✓</p><h3>APOE</h3><p>已驗並完成共享決策</p></div><div class="k-card sage" data-s="6"><p class="k-no">✓</p><h3>可行性</h3><p>能配合給藥與多次 MRI</p></div></div>
+<p class="k-take">林先生：MCI、微出血 1 顆、未服抗凝劑：可轉介，仍需類澱粉確認與 APOE</p>
+<p class="k-cite">出處：Cummings 2023 PMID 37357276｜Rabinovici 2025 PMID 40155270｜LEQEMBI Prescribing Information, DailyMed SPL 2026-07-21</p>
+</div>
+<template class="k-narr">
+<p data-step="0">哪些病人可能適合這類治療？</p>
+<p data-step="1">必須是 MCI 或輕度失智。</p>
+<p data-step="2">要有 PET 或 CSF 確認類澱粉。</p>
+<p data-step="3">要有近期基線 MRI。</p>
+<p data-step="4">需要抗凝的人要特別謹慎。</p>
+<p data-step="5">要驗 APOE，完成共享決策。</p>
+<p data-step="6">還要能配合給藥和 MRI。林先生可以轉介評估。</p>
+<p data-step="6">要注意，這不是用藥清單，而是轉介時的思考順序。真正的決定，由專科和家屬共同完成。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="急診決策">
+<div class="k-head">
+<h2>決策點 4：這是中風，還是 ARIA？</h2>
+<p class="k-sub">74 歲，自費打 lecanemab 第 3 個月；突發右側無力、失語，到院距發作 90 分鐘</p>
+</div>
+<div class="k-body">
+<div class="k-opts k-opts2">
+<button class="k-opt bad" data-reveal="1"><span class="k-letter">A</span><span><span class="k-say">符合時窗，立即給血栓溶解劑</span><span class="k-fb"><strong class="k-t">✗ 少了關鍵一問</strong>：兩份仿單都記錄過 ARIA 合併溶栓後的致命腦出血</span></span></button>
+<button class="k-opt good" data-reveal="2"><span class="k-letter">B</span><span><span class="k-say">啟動中風流程，同時確認用藥、影像並會診神經科</span><span class="k-fb"><strong class="k-s">✓ 正解</strong>：ARIA-E 可模仿缺血性中風，給溶栓前要先想到它</span></span></button>
+<button class="k-opt bad" data-reveal="3"><span class="k-letter">C</span><span><span class="k-say">認定是 ARIA，先停藥觀察</span><span class="k-fb"><strong class="k-t">✗ 不能先下結論</strong>：真的中風一樣會發生，不能延誤評估</span></span></button>
+<button class="k-opt bad" data-reveal="4"><span class="k-letter">D</span><span><span class="k-say">先給高劑量類固醇</span><span class="k-fb"><strong class="k-t">✗ 順序錯了</strong>：要先有影像與診斷，再由神經科決定處置</span></span></button>
+</div>
+<p class="k-take">病史多問一句：「最近有沒有打失智新藥？」</p>
+<p class="k-cite">出處：LEQEMBI Prescribing Information, DailyMed SPL 2026-07-21, Boxed Warning、§5.1｜KISUNLA Prescribing Information, DailyMed SPL 2025-12-30, §5.1；查核日 2026-11-06。本題為教學情境，非真實病人</p>
+</div>
+<template class="k-narr">
+<p data-step="0">假設你在急診值班。七十四歲長輩打 lecanemab 第三個月，突然右側無力、失語，到院距發作九十分鐘。你會怎麼做？</p>
+<p data-step="1">直接給血栓溶解劑少了關鍵的一問。兩份仿單都記錄過 ARIA 合併溶栓後的致命腦出血。</p>
+<p data-step="2">正解是啟動中風流程，同時確認用藥和影像，並會診神經科，因為 ARIA 水腫可以模仿缺血性中風。</p>
+<p data-step="3">但也不能直接認定是 ARIA，真的中風一樣會發生。</p>
+<p data-step="4">類固醇也不是第一步，要先有影像與診斷。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="共享決策">
+<div class="k-head">
+<h2>能期待什麼、要付出什麼、台灣現況</h2>
+<p class="k-sub">和家屬談的三句話</p>
+</div>
+<div class="k-body">
+<div class="k-g3"><div class="k-card navy" data-s="1"><h3>能期待</h3><p>減緩，不是恢復已失去的功能；愈早期效果愈好</p></div><div class="k-card sage" data-s="2"><h3>要付出</h3><p>定期給藥與多次 MRI；ARIA 可能有症狀；APOE 遺傳諮詢</p></div><div class="k-card terra" data-s="3"><h3>台灣現況</h3><p>兩藥 2025 年取得藥證、自費；報導估 18 個月約 100–150 萬元；截至 2026-11 未見給付公告</p></div></div>
+<p class="k-take">PGY 的角色：把期待講清楚，不承諾「會變好」</p>
+<p class="k-cite">出處：van Dyck 2023 PMID 36449413｜Cummings 2023 PMID 37357276｜中央社 2025-07-31、TechNews 2025-07-31（欣智樂專家會議不建議給付）；查核日 2026-11-06，以健保署公告為準</p>
+</div>
+<template class="k-narr">
+<p data-step="0">和家屬談，要講三件事。</p>
+<p data-step="1">第一，這是減緩，不是恢復。</p>
+<p data-step="2">第二，要定期給藥和照 MRI，可能出現腦水腫或小出血。</p>
+<p data-step="3">第三，目前自費，大約一百到一百五十萬元。到今年十一月，我沒有查到健保給付的公告。</p>
+<p data-step="3">專家會議曾對 donanemab 不建議給付，主要是長期效益資料不足和藥費高。不要對家屬承諾會變好，也不要說完全沒用。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="evoke">
+<div class="k-head">
+<h2>Semaglutide 第三期：沒有延緩退化</h2>
+<p class="k-sub">evoke 與 evoke+：3,808 位早期 AD，口服 semaglutide 14 mg vs 安慰劑，104 週</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-kpis"><div class="k-kpi k-neu" data-s="1"><p class="k-kl">evoke：CDR-SB 差</p><p class="k-kv">−0.08</p><p class="k-kd">95% CI −0.35 至 0.20；p=0.57</p></div><div class="k-kpi k-neu" data-s="1"><p class="k-kl">evoke+：CDR-SB 差</p><p class="k-kv">0.10</p><p class="k-kd">95% CI −0.17 至 0.38；p=0.46</p></div></div></div><div class="k-g1"><div class="k-card navy" data-s="2"><h3>為什麼值得講</h3><p>觀察性研究曾顯示 GLP-1 使用者失智風險較低，但 RCT 沒有重現</p></div><div class="k-card sage" data-s="3"><h3>帶走的一課</h3><p>相關不等於因果：有糖尿病或肥胖適應症照常用，不要為防失智開藥</p></div></div></div>
+<p class="k-take">觀察性訊號要等隨機試驗確認</p>
+<p class="k-cite">出處：Cummings JL, et al. Lancet 2026;407:2167–79. PMID 41865758</p>
+</div>
+<template class="k-narr">
+<p data-step="0">再講一個陰性結果。</p>
+<p data-step="1">Semaglutide 在早期 AD 的兩個第三期試驗，CDR-SB 都沒有差異。</p>
+<p data-step="2">觀察性研究曾經顯示風險較低，但隨機試驗沒有重現。</p>
+<p data-step="3">有糖尿病或肥胖的適應症照常使用，但不要為了預防失智而開藥。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="治療" data-title="BPSD">
+<div class="k-head">
+<h2>BPSD：先找原因，藥物放最後</h2>
+<p class="k-sub">DICE：Describe、Investigate、Create、Evaluate</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-g2"><div class="k-card navy" data-s="1"><p class="k-no">D</p><h3>描述</h3><p>什麼行為？何時、對誰？</p></div><div class="k-card sage" data-s="2"><p class="k-no">I</p><h3>調查</h3><p>疼痛、便秘、感染、睡眠、感官</p></div><div class="k-card terra" data-s="3"><p class="k-no">C</p><h3>共創</h3><p>調整環境與溝通，不爭辯</p></div><div class="k-card butter" data-s="4"><p class="k-no">E</p><h3>評估</h3><p>有沒有改善？誰追蹤？</p></div></div></div><div class="k-kpis"><div class="k-kpi k-warn2" data-s="5"><p class="k-kl">抗精神病藥</p><p class="k-kv">黑框警告</p><p class="k-kd">增加中風與死亡風險；只在危險、非藥物無效時短期用</p></div><div class="k-kpi" data-s="6"><p class="k-kl">Brexpiprazole（FDA 2023）</p><p class="k-kv">CMAI −5.32</p><p class="k-kd">12 週，Cohen d 0.35；仍有黑框</p></div></div></div>
+<p class="k-take">林先生的焦躁，先問疼痛、便秘、睡眠、聽不清楚、被糾正</p>
+<p class="k-cite">出處：Kales HC, et al. BMJ 2015;350:h369. PMID 25731881｜Lee D, et al. JAMA Neurol 2023;80:1307–16. PMID 37930669｜2023 AGS Beers PMID 37139824</p>
+</div>
+<template class="k-narr">
+<p data-step="0">最後是精神行為症狀，用 DICE 四步。</p>
+<p data-step="1">先描述行為。</p>
+<p data-step="2">調查原因。</p>
+<p data-step="3">共同調整環境和溝通。</p>
+<p data-step="4">再評估效果。</p>
+<p data-step="5">抗精神病藥有黑框警告，只在危險時短期用。</p>
+<p data-step="6">Brexpiprazole 效果量零點三五，仍然有黑框。</p>
+<p data-step="6">林先生新發的焦躁，先問疼痛、便秘、睡眠、聽不清楚，還有是不是常被糾正。如果用藥，要有停藥計畫。</p>
+</template>
+</section>
+<section class="k-slide k-chap" data-chapter="閉環" data-nonav="1" data-title="05 照護閉環">
+<div class="k-ch-l">
+<p class="k-ch-no" style="color:#2E8B74">05</p>
+<h2>照護閉環</h2>
+<p class="k-ch-en">CLOSE THE CARE LOOP</p>
+<ol><li data-s="1"><b style="background:#2E8B74">1</b>Lancet 2024：14 項因子、45%</li><li data-s="1"><b style="background:#2E8B74">2</b>WHO 2026：看清建議強度</li><li data-s="1"><b style="background:#2E8B74">3</b>失智照護 3.0 與長照資源</li><li data-s="1"><b style="background:#2E8B74">4</b>輕度階段完成預立決定</li><li data-s="1"><b style="background:#2E8B74">5</b>寫成一張可執行的計畫</li></ol>
+</div>
+<div class="k-ch-r"><img alt="" src="assets/ill/ill_risk_reduction.png"/><p class="k-gencap">AI 生成示意</p></div>
+<template class="k-narr">
+<p data-step="0">最後一站，回到病人和家庭。</p>
+<p data-step="1">這一章決定林先生明天開始的生活，會不會不一樣。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="閉環" data-title="Lancet 2024">
+<div class="k-head">
+<h2>14 項可改變因子，合計約 45%</h2>
+<p class="k-sub">族群歸因比例，不能直接換算成個人風險下降</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-hbars"><div class="k-hbr" data-s="1"><span class="k-hbl">聽力損失</span><span class="k-hbt"><span class="k-hbf" style="width:87.5%;background:#2E8B74"></span></span><span class="k-hbv">7%</span></div><div class="k-hbr" data-s="1"><span class="k-hbl">高 LDL</span><span class="k-hbt"><span class="k-hbf" style="width:87.5%;background:#2E8B74"></span></span><span class="k-hbv">7%</span></div><div class="k-hbr" data-s="2"><span class="k-hbl">教育不足</span><span class="k-hbt"><span class="k-hbf" style="width:62.5%;background:#1F6FB2"></span></span><span class="k-hbv">5%</span></div><div class="k-hbr" data-s="3"><span class="k-hbl">社交孤立</span><span class="k-hbt"><span class="k-hbf" style="width:62.5%;background:#B45309"></span></span><span class="k-hbv">5%</span></div><div class="k-hbr" data-s="3"><span class="k-hbl">憂鬱、腦外傷、空汙</span><span class="k-hbt"><span class="k-hbf" style="width:37.5%;background:#8A96A3"></span></span><span class="k-hbv">各 3%</span></div></div></div><div class="k-g1"><div class="k-card navy" data-s="4"><h3>林先生的介入點</h3><p>缺乏活動、聽力與視力待檢查、社交；血壓與 LDL 已治療</p></div></div></div>
+<p class="k-take">就算已經是 MCI，血壓、聽力、活動與社交仍是醫師能開的處方</p>
+<p class="k-cite">出處：Livingston G, et al. Lancet 2024;404:572–628. PMID 39096926</p>
+</div>
+<template class="k-narr">
+<p data-step="0">Lancet 委員會整理了十四項可改變的因子，合計約百分之四十五。</p>
+<p data-step="1">最大的是聽力損失和高 LDL，各百分之七。</p>
+<p data-step="2">教育不足百分之五。</p>
+<p data-step="3">社交孤立百分之五。這些是族群層級的推估。</p>
+<p data-step="4">林先生可以介入的是活動、聽力和社交。</p>
+<p data-step="4">二零二四年新增兩項：高 LDL 和未矯正的視力喪失。請注意，這些比例是族群推估，不能告訴病人個人風險會下降多少。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="閉環" data-title="WHO 2026">
+<div class="k-head">
+<h2>WHO 2026：照建議強度開處方</h2>
+<p class="k-sub">第二版，2026-07-15；對象為未失智成人，含 MCI</p>
+</div>
+<div class="k-body">
+<div class="k-split2 k-s64"><div class="k-col1"><div class="k-g2"><div class="k-card navy" data-s="1"><h3>強建議</h3><p>身體活動（認知正常者）、戒菸</p></div><div class="k-card sage" data-s="2"><h3>條件式</h3><p>MCI 活動、認知訓練、社交、飲食、高血壓、糖尿病、血脂、助聽器、多領域介入</p></div><div class="k-card terra" data-s="3"><h3>不建議</h3><p>無缺乏者補維生素 B、E、omega-3、綜合維生素</p></div><div class="k-card butter" data-s="4"><h3>證據不足</h3><p>視力、憂鬱、睡眠、腦外傷後介入</p></div></div></div><div class="k-lit" data-s="5"><div class="k-litbox"><img alt="&lt;b&gt;官方截圖&lt;/b&gt;：WHO guidelines, 2nd ed." src="assets/shots/crop_who_2026.png"/></div><p class="k-litcap"><span class="k-badge">CC BY-NC-SA 3.0 IGO</span> <b>官方截圖</b>：WHO guidelines, 2nd ed.</p></div></div>
+<p class="k-take">不缺乏，就不要補維生素和魚油</p>
+<p class="k-cite">出處：WHO. Risk reduction of cognitive decline and dementia, 2nd ed. 2026-07-15. https://www.who.int/publications/i/item/9789240123557</p>
+</div>
+<template class="k-narr">
+<p data-step="0">世界衛生組織今年七月發佈第二版指引。</p>
+<p data-step="1">強建議只有少數幾項：認知正常者的身體活動，以及戒菸。</p>
+<p data-step="2">很多是條件式建議，包括 MCI 的運動和助聽器。</p>
+<p data-step="3">明確不建議：不缺乏就不要補維生素和魚油。</p>
+<p data-step="4">視力、憂鬱和睡眠則證據不足。</p>
+<p data-step="5">開處方時要照建議強度，不要誇大。</p>
+<p data-step="5">本課程九月版曾把飲食和血壓寫成強烈推薦，與指引原文不符，已經更正。提醒大家，引用指引時要看清楚建議強度。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="閉環" data-title="生活處方">
+<div class="k-head">
+<h2>把建議寫成做得到的處方</h2>
+<p class="k-sub">處方要具體到「做什麼、多少、誰陪」</p>
+</div>
+<div class="k-body">
+<div class="k-split2 k-s64"><div class="k-col1"><table class="k-table"><tr><th>處方｜林先生</th><th>內容</th></tr><tr data-s="1"><td class="k-item">運動</td><td>每週快走 150 分鐘＋肌力 2 次</td></tr><tr data-s="2"><td class="k-item">社交</td><td>社區據點，每週 2 次</td></tr><tr data-s="3"><td class="k-item">聽力視力</td><td>聽力檢查、眼科檢查</td></tr><tr data-s="4"><td class="k-item">血管</td><td>血壓、LDL 持續治療，個別化</td></tr></table></div><div class="k-kpis"><div class="k-kpi k-good" data-s="5"><p class="k-kl">US POINTER（n=2,111）</p><p class="k-kv">+0.029 SD／年</p><p class="k-kd">結構式 vs 自主式多領域介入（P=.008）</p></div><div class="k-kpi k-neu" data-s="6"><p class="k-kl">SPRINT MIND</p><p class="k-kv">HR 0.81</p><p class="k-kd">積極降壓與 MCI（0.69–0.95）；失智未達顯著</p></div><div class="k-kpi" data-s="7"><p class="k-kl">ACHIEVE（n=977）</p><p class="k-kv">高風險子群受益</p><p class="k-kd">整體 3 年認知無差異</p></div></div></div>
+<p class="k-take">結構化比叫病人自己來更有效</p>
+<p class="k-cite">出處：Baker LD, et al. JAMA 2025. PMID 40720610｜Williamson JD, et al. JAMA 2019;321:553–61. PMID 30688979｜Lin FR, et al. Lancet 2023;402:786–97. PMID 37478886</p>
+</div>
+<template class="k-narr">
+<p data-step="0">把建議寫成處方。</p>
+<p data-step="1">運動要寫到幾分鐘。</p>
+<p data-step="2">社交要寫到每週幾次。</p>
+<p data-step="3">聽力和視力要安排檢查。</p>
+<p data-step="4">血壓和血脂持續治療。</p>
+<p data-step="5">美國 POINTER 顯示結構式介入比較好，但差距不大。</p>
+<p data-step="6">SPRINT MIND 降低 MCI 風險。</p>
+<p data-step="7">ACHIEVE 整體無差異，高風險子群有差異。</p>
+<p data-step="7">處方要具體到做什麼、多少、誰陪，例如女兒週末陪走。三個月後回診，要看執行率，不只是看分數。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="閉環" data-title="失智照護 3.0">
+<div class="k-head">
+<h2>失智照護 3.0：2026–2035</h2>
+<p class="k-sub">2026 年 6 月函頒；全齡、全病程、全支持；12 部會、21 項行動方案</p>
+</div>
+<div class="k-body">
+<div class="k-split2"><div class="k-col1"><div class="k-kpis"><div class="k-kpi k-neu" data-s="1"><p class="k-kl">2026 年推估失智人口</p><p class="k-kv">近 40 萬</p><p class="k-kd">衛福部推估</p></div><div class="k-kpi k-good" data-s="2"><p class="k-kl">失智友善臺灣 888（2035）</p><p class="k-kv">三個八成</p><p class="k-kd">精準診斷、服務涵蓋、失智識能</p></div><div class="k-kpi" data-s="3"><p class="k-kl">長照服務人數</p><p class="k-kv">提升至 42 萬</p><p class="k-kd">特別納入年輕型失智</p></div></div></div><div class="k-pubshow" data-s="4"><div class="k-g1"><div class="k-card navy" data-s="4"><h3>全齡</h3><p>服務對象擴大至全年齡層失智者</p></div><div class="k-card sage" data-s="4"><h3>全病程</h3><p>完善家庭、社會與經濟支持</p></div></div></div></div>
+<p class="k-take">轉介資源會持續擴大；細項以衛福部公告為準</p>
+<p class="k-cite">出處：衛生福利部新聞 https://mohw.gov.tw/cp-16-88207-1.html 、https://mohw.gov.tw/cp-16-88203-1.html ；查核日 2026-11-06</p>
+</div>
+<template class="k-narr">
+<p data-step="0">再看台灣的政策。今年六月函頒失智綱領三點零。</p>
+<p data-step="1">今年失智人口推估近四十萬。</p>
+<p data-step="2">二零三五年目標是三個八成。</p>
+<p data-step="3">長照服務人數提升到四十二萬，並納入年輕型失智。</p>
+<p data-step="4">服務細項可以到衛福部網站查詢。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="閉環" data-title="照顧者與長照">
+<div class="k-head">
+<h2>把家屬一起納入照護計畫</h2>
+<p class="k-sub">門診多問一句：「這半年照顧爸爸，妳自己睡得好嗎？」</p>
+</div>
+<div class="k-body">
+<div class="k-g2"><div class="k-card navy" data-s="1"><p class="k-no">1966</p><h3>長照專線</h3><p>照管專員到府：居家、日照、交通、輔具、喘息</p></div><div class="k-card sage" data-s="2"><p class="k-no">共照中心</p><h3>失智共同照護中心</h3><p>個管師陪伴就醫，媒合據點與資源</p></div><div class="k-card terra" data-s="3"><p class="k-no">0800-507-272</p><h3>家庭照顧者關懷專線</h3><p>照顧者諮詢、紓壓與支持團體</p></div><div class="k-card butter" data-s="4"><p class="k-no">0800-474-580</p><h3>失智關懷專線</h3><p>台灣失智症協會：疾病與照顧諮詢</p></div></div>
+<p class="k-take">評估照顧者負荷：睡眠、情緒、工作與經濟；家庭會議分工</p>
+<p class="k-cite">出處：衛福部長照專線 1966｜中華民國家庭照顧者關懷總會｜台灣失智症協會；查核日 2026-11-06</p>
+</div>
+<template class="k-narr">
+<p data-step="0">照顧者要一起評估。</p>
+<p data-step="1">長照專線一九六六，照管專員會到府評估。</p>
+<p data-step="2">失智共同照護中心有個管師。</p>
+<p data-step="3">家庭照顧者關懷專線提供諮詢和支持團體。</p>
+<p data-step="4">失智關懷專線由失智症協會提供。</p>
+<p data-step="4">照顧者的負荷可以用量表，但更重要的是當面問一句：這半年照顧爸爸，妳自己睡得好嗎？誰可以幫妳？</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="閉環" data-title="預立決定">
+<div class="k-head">
+<h2>趁「還能自己決定」時完成</h2>
+<p class="k-sub">林先生的 MCI 階段正是時機</p>
+</div>
+<div class="k-body">
+<div class="k-g2"><div class="k-card navy" data-s="1"><h3>預立醫療決定</h3><p>ACP 諮商後簽署 AD：表達維生治療與人工營養意願</p></div><div class="k-card sage" data-s="2"><h3>意定監護</h3><p>清楚時自己指定未來的監護人</p></div><div class="k-card terra" data-s="3"><h3>輔助／監護宣告</h3><p>能力下降時由法院宣告</p></div><div class="k-card butter" data-s="4"><h3>安養信託</h3><p>退休金與不動產專款專用，防詐騙</p></div></div>
+<p class="k-take">PGY 能做的：記錄決策能力，轉介 ACP 門診與社工</p>
+<p class="k-cite">出處：病人自主權利法（2019 施行）｜民法第 14、15-1 條、第 1113-2 條起</p>
+</div>
+<template class="k-narr">
+<p data-step="0">法律和醫療決定，要趁還能自己決定的時候做。</p>
+<p data-step="1">預立醫療決定，先做諮商再簽署。</p>
+<p data-step="2">意定監護，是在清楚的時候，先自己指定未來的監護人。</p>
+<p data-step="3">能力下降時才由法院宣告。</p>
+<p data-step="4">安養信託可以防詐騙。PGY 不用處理法律細節，記錄決策能力並轉介就好。</p>
+<p data-step="4">林先生現在是 MCI，還能清楚表達自己的意願，這正是最適合討論的時候。拖到中度失智，就來不及了。</p>
+</template>
+</section>
+<section class="k-slide" data-chapter="閉環" data-title="完整照護計畫">
+<div class="k-head">
+<h2>林先生的全人處置單</h2>
+<p class="k-sub">今天、轉介、追蹤；五條線同時啟動</p>
+</div>
+<div class="k-body">
+<table class="k-table"><tr><th>面向</th><th>今天門診</th><th>轉介與安排</th><th>追蹤</th></tr><tr data-s="1"><td class="k-item">安全</td><td>暫停騎車；指定負責人</td><td>職能治療居家評估</td><td>每次回診確認</td></tr><tr data-s="2"><td class="k-item">病因</td><td>完成檢驗與 MRI</td><td>記憶門診：血液標記、APOE</td><td>依結果決定</td></tr><tr data-s="3"><td class="k-item">治療</td><td>說明不常規用 AChEI</td><td>專科共享決策</td><td>ARIA 衛教卡</td></tr><tr data-s="4"><td class="k-item">生活</td><td>運動、社交、飲食處方</td><td>聽力師、眼科、據點</td><td>3 個月看執行率</td></tr><tr data-s="5"><td class="k-item">家庭法律</td><td>照顧者負荷評估</td><td>1966、共照中心、ACP</td><td>家庭會議</td></tr><tr data-s="6"><td class="k-item">認知追蹤</td><td>基準 MoCA 23、CDR-SB 2.0</td><td>—</td><td>6–12 個月同工具</td></tr></table>
+<p class="k-take">不要等確診才開始</p>
+<p class="k-cite">出處：本課程各章整理；教學個案</p>
+</div>
+<template class="k-narr">
+<p data-step="0">這是今天替林先生開立的全人處置單。</p>
+<p data-step="1">安全今天就啟動。</p>
+<p data-step="2">病因轉記憶門診。</p>
+<p data-step="3">治療說清楚期待。</p>
+<p data-step="4">生活開處方。</p>
+<p data-step="5">家庭和法律一起啟動。</p>
+<p data-step="6">認知用同一套工具追蹤。</p>
+<p data-step="6">這張單子的重點不是開一顆藥，而是五條線今天同時啟動。不要等到確診才開始。</p>
+</template>
+</section>
+<section class="k-slide" data-title="帶走三件事">
+<div class="k-head">
+<h2>帶走三件事</h2>
+</div>
+<div class="k-body">
+<div class="k-g3"><div class="k-card navy" data-s="1"><p class="k-no">1</p><h3>先排急症，再判讀分數</h3><p>急性、波動、注意力不集中先當譫妄；有紅旗當天處理；先停可疑藥物</p></div><div class="k-card sage" data-s="2"><p class="k-no">2</p><h3>分數要接上功能與安全</h3><p>知情者＋客觀測驗＋IADL 才能分期；第一天就做安全 CGA</p></div><div class="k-card terra" data-s="3"><p class="k-no">3</p><h3>病因分層，照護閉環</h3><p>血液檢測在評估後判讀；抗體要懂 ARIA；生活處方同時啟動</p></div></div>
+<p class="k-take">遇到認知異常的長輩，照這三步走</p>
+<p class="k-cite">出處：Atri A, et al. Alzheimers Dement 2025;21:e14333. PMID 39713942｜Palmqvist S, et al. Alzheimers Dement 2025;21:e70535. PMID 40729527｜WHO 2026</p>
+</div>
+<template class="k-narr">
+<p data-step="0">最後帶走三件事。</p>
+<p data-step="1">第一，先排急症，再判讀分數。</p>
+<p data-step="2">第二，分數要接上功能與安全。</p>
+<p data-step="3">第三，病因工具分層使用，照護形成閉環。謝謝大家。</p>
+<p data-step="3">不管大家將來走哪一科，遇到認知異常的長輩，照這三步走，就不會踩雷。</p>
+</template>
+</section>
+<section class="k-slide" data-title="參考文獻">
+<div class="k-head">
+<h2>參考文獻</h2>
+<p class="k-sub">官方：Leqembi／Kisunla 仿單（DailyMed）、FDA K242706／K252163／K261686、WHO 2026、APA 2025、AAIC 2026、衛福部；查核日 2026-11-06</p>
+</div>
+<div class="k-body">
+<div class="k-refs"><p>1. Atri A. Alzheimers Dement 2025;21:e14333. PMID 39713942</p><p>2. Jack CR Jr. Alzheimers Dement 2024;20:5143–69. PMID 38934362</p><p>3. Palmqvist S. Alzheimers Dement 2025;21:e70535. PMID 40729527</p><p>4. Palmqvist S. JAMA 2024;332:1245–57. PMID 39068545</p><p>5. Huang KL. Alzheimers Dement 2025;21:e14297. PMID 39777990</p><p>6. Chen Y. J Neurol 2026;273. PMID 41784652</p><p>7. Collins EC. Alzheimers Dement 2026;22:e71740. PMID 42565262</p><p>8. Malek-Ahmadi M. JAMA Neurol 2026;83:13–19. PMID 41324928</p><p>9. Ceriello C. Neurology 2026;107:e218180. PMID 42308436</p><p>10. van Dyck CH. N Engl J Med 2023;388:9–21. PMID 36449413</p><p>11. Sims JR. JAMA 2023;330:512–27. PMID 37459141</p><p>12. Cummings J. J Prev Alz Dis 2023;10:362–77. PMID 37357276</p><p>13. Rabinovici GD. J Prev Alz Dis 2025;12:100150. PMID 40155270</p><p>14. Nonino F. Cochrane 2026;CD016297. PMID 41985900</p><p>15. Wu Y. J Neurol 2026;273. PMID 42907679</p><p>16. Shim Y. J Alzheimers Dis 2026;113:1614–8. PMID 42678678</p><p>17. Cummings JL. Lancet 2026;407:2167–79. PMID 41865758</p><p>18. Kales HC. BMJ 2015;350:h369. PMID 25731881</p><p>19. Lee D. JAMA Neurol 2023;80:1307–16. PMID 37930669</p><p>20. Livingston G. Lancet 2024;404:572–628. PMID 39096926</p><p>21. Baker LD. JAMA 2025. PMID 40720610</p><p>22. Williamson JD. JAMA 2019;321:553–61. PMID 30688979</p><p>23. Lin FR. Lancet 2023;402:786–97. PMID 37478886</p><p>24. Inouye SK. Ann Intern Med 1990;113:941–8. PMID 2240918</p><p>25. Tieges Z. Age Ageing 2021;50:733–43. PMID 33951145</p><p>26. Crone C. Am J Psychiatry 2025;182:880–4. PMID 40887950</p><p>27. AGS Beers. J Am Geriatr Soc 2023;71:2052–81. PMID 37139824</p><p>28. Scheltens P. JNNP 1992;55:967–72. PMID 1431963</p><p>29. Fazekas F. AJR 1987;149:351–6. PMID 3496763</p><p>30. Galvin JE. Neurology 2005;65:559–64. PMID 16116116</p><p>31. Yang YH. Am J Alzheimers Dis 2011;26:134–8. PMID 21415088</p><p>32. Nasreddine ZS. JAGS 2005;53:695–9. PMID 15817019</p><p>33. Tsai CF. Int Psychogeriatr 2012;24:651–8. PMID 22152127</p><p>34. Borson S. Int J Geriatr Psychiatry 2000;15:1021–7. PMID 11113982</p><p>35. Folstein MF. J Psychiatr Res 1975;12:189–98. PMID 1202204</p><p>36. Teng EL. Int Psychogeriatr 1994;6:45–58. PMID 8054493</p><p>37. Morris JC. Neurology 1993;43:2412–4. PMID 8232972</p><p>38. O'Bryant SE. Arch Neurol 2008;65:1091–5. PMID 18695059</p><p>39. Petersen RC. Neurology 2018;90:126–35. PMID 29282327</p><p>40. Jessen F. Lancet Neurol 2020;19:271–8. PMID 31958406</p><p>41. Lawton MP. Gerontologist 1969;9:179–86. PMID 5349366</p><p>42. Katz S. JAMA 1963;185:914–9. PMID 14044222</p></div>
+</div>
+<template class="k-narr">
+<p data-step="0">參考文獻放在這裡，供會後查閱。</p>
+</template>
+</section>
+
+<div id="k-chrome" aria-hidden="true">
+  <span id="k-chapter"></span>
+  <span id="k-track"><span id="k-bar" style="display:block"></span></span>
+  <span id="k-counter"></span>
+</div>
+<div id="k-sub" aria-live="polite"></div>
+</main>
+
+
+<!-- 開場選單 -->
+<div id="k-start" role="dialog" aria-label="選擇播放方式"><div class="box">
+  <h1>CGA 認知評估異常的後續處置與建議</h1>
+  <p class="meta">陳培豪 醫師｜2026 年 11 月｜馬偕紀念醫院 PGY 核心課程</p>
+  <div class="modes">
+    <div class="mode">
+      <h2>🎤 主講模式</h2>
+      <p>我自己講、自己翻頁。<br>← → 翻頁與逐步揭示，N 看逐字稿，O 總覽，B 黑屏。</p>
+      <button class="go" id="kgo-present">開始主講</button>
+    </div>
+    <div class="mode">
+      <h2>▶ 自動播放</h2>
+      <p>配音、字幕、配樂自動帶完整場。</p>
+      <div class="opt" data-opt="voice"></div>
+      <div class="opt" data-opt="sub"><b>字幕</b><label><input type="checkbox" checked>顯示</label></div>
+      <div class="opt" data-opt="bgm"><b>配樂</b><label><input type="checkbox" checked>播放</label></div>
+      <button class="go sage" id="kgo-auto">開始自動播放</button>
+    </div>
+  </div>
+  <p class="kb">版本 20261106-0a64｜自動播放中：空白鍵 暫停／繼續｜← → 上一句／下一句｜S 字幕｜M 配樂｜移動滑鼠叫出控制列，「選單」回到這裡</p>
+</div></div>
+
+<!-- 控制列 -->
+<div id="k-ctl" role="toolbar" aria-label="播放控制">
+  <button id="kb-prev" title="上一步">◀</button>
+  <button id="kb-play" class="main auto-only">▶ 播放</button>
+  <button id="kb-next" title="下一步">▶</button>
+  <span class="t auto-only" id="kb-time"></span>
+  <button id="kb-voice" class="auto-only">配音</button>
+  <button id="kb-sub" class="auto-only" aria-pressed="true">字幕</button>
+  <button id="kb-bgm" aria-pressed="true">配樂</button>
+  <button id="kb-notes" class="present-only">講稿</button>
+  <button id="kb-ov">總覽</button>
+  <button id="kb-fs">全螢幕</button>
+  <button id="kb-menu">選單</button>
+</div>
+
+<div id="k-end"><div class="box"><p>播放完畢，謝謝收看</p><button id="kend-again">再播一次</button><button id="kend-menu">回到選單</button></div></div>
+<div id="k-black"></div>
+<div id="k-overview" aria-label="投影片總覽"><div id="k-ovgrid"></div></div>
+<aside class="k-panelx" id="k-notes"><h3>逐字稿（目前這一步標亮）</h3><div id="k-notesbody"></div></aside>
+
+<audio id="k-voice" preload="auto"></audio>
+<audio id="k-bgm" preload="auto" loop></audio>
+<script src="beats.js?v=44bac32d"></script>
+<script src="deck.js?v=2153d9d1"></script>
+</body>
+</html>
