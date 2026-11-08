@@ -20,9 +20,36 @@
 
   /* ---------- 縮放：左上角為原點＋明確平移（行動裝置不會把舞台推出畫面） ---------- */
   const TOUCH = matchMedia('(hover: none) and (pointer: coarse)').matches;   // 手機、平板（觸控筆電仍算桌機）
+  // 手機重排模式（2026-11-08 業主第二次回報手機直／橫向跑版）：
+  // 手機直放（寬 < 700）或矮的橫放（觸控且高 < 520）時，不再把 1920×1080 整頁等比縮小（直放字只剩 4–6px），
+  // 改成「設計寬度 760（直）／1280（橫）的單欄或雙欄版面 × zoom」，頁面可上下捲動，字級約 14–16px 以上。
+  const RW = { port: 760, land: 1280 };
   function fit() {
     const vv = window.visualViewport;
     const w = vv ? vv.width : innerWidth, h = vv ? vv.height : innerHeight;
+    const reflow = w < 700 || (TOUCH && h < 520);
+    const B = document.body, c0 = document.getElementById('k-ctl');
+    B.classList.toggle('k-reflow', reflow);
+    document.documentElement.classList.toggle('k-reflow-root', reflow);
+    if (reflow) {
+      const land = w > h, dw = land ? RW.land : RW.port;
+      const z = (land && TOUCH ? w - 44 : w) / dw;
+      B.classList.toggle('k-land', land); B.classList.toggle('k-port', !land);
+      stage.style.transform = 'none'; stage.style.width = dw + 'px'; stage.style.zoom = z;
+      stage.style.minHeight = (h / z) + 'px';
+      document.documentElement.style.setProperty('--rzi', 1 / z);
+      B.classList.remove('ctl-below'); B.classList.toggle('ctl-tap', land);
+      if (c0) {
+        c0.style.top = '';
+        // 直放時控制列固定在底部且可能折成兩行：把它的實際高度交給字幕（#k-sub 疊在控制列上方）
+        const setH = () => document.documentElement.style.setProperty('--ctlh', (!land ? c0.getBoundingClientRect().height + 12 : 0) + 'px');
+        setH();
+        if (!fit.ro && window.ResizeObserver) { fit.ro = new ResizeObserver(setH); fit.ro.observe(c0); }
+      }
+      return;
+    }
+    B.classList.remove('k-land', 'k-port');
+    stage.style.width = ''; stage.style.zoom = ''; stage.style.minHeight = '';
     let s = Math.min(w / 1920, h / 1080), rsv = 0;
     // 觸控橫放、上下沒空間又左右沒留白（16:9 手機）→ 右側讓出 40px 給 ☰，簡報不被蓋
     if (TOUCH && (h - 1080 * s) / 2 < 64 && (w - 1920 * s) / 2 < 40) { rsv = 40; s = Math.min((w - rsv) / 1920, h / 1080); }
@@ -35,10 +62,11 @@
     const c = document.getElementById('k-ctl');
     if (c) c.style.top = below ? `${(h + 1080 * s) / 2 + 10}px` : '';
   }
-  addEventListener('resize', fit);
+  const refit = () => { fit(); try { slides[cur] && fitHead(slides[cur]); } catch (e) { /* cur 尚未宣告（載入初期） */ } };
+  addEventListener('resize', refit);
   if (document.fonts) document.fonts.ready.then(() => slides[cur] && fitHead(slides[cur]));
-  addEventListener('orientationchange', () => setTimeout(fit, 150));
-  if (window.visualViewport) visualViewport.addEventListener('resize', fit);
+  addEventListener('orientationchange', () => setTimeout(refit, 150));
+  if (window.visualViewport) visualViewport.addEventListener('resize', refit);
   fit();
 
   /* ---------- 每頁步數、章節膠囊 ---------- */
@@ -79,6 +107,8 @@
   function render() {
     slides.forEach((s, i) => s.classList.toggle('is-active', i === cur));
     const s = slides[cur];
+    if (render.last !== cur && document.body.classList.contains('k-reflow')) scrollTo(0, 0);   // 重排模式換頁回到頁首（主講與自動播放都經過這裡）
+    render.last = cur;
     fitHead(s);
     s.dataset.step = showAll ? 'all' : step;   // CSS 可用 .k-slide[data-step="2"] 做步數相依的樣式
     s.querySelectorAll('[data-s]').forEach(el => el.classList.toggle('on', showAll || step >= +el.dataset.s));
@@ -90,6 +120,12 @@
       b.setAttribute('aria-pressed', step >= lo && step < hi); });
     document.dispatchEvent(new CustomEvent('k-step', { detail: { slide: cur, step, el: s, all: showAll } }));
     s.querySelectorAll('[data-reveal]').forEach(el => { if (showAll || step >= +el.dataset.reveal) el.classList.add('shown'); });
+    // 重排模式：這一步新出現的元素若在畫面外，捲到看得到（手機直放內容比螢幕長）
+    if (!showAll && step > 0 && document.body.classList.contains('k-reflow')) {
+      const nw = [...s.querySelectorAll(`[data-s="${step}"],[data-reveal="${step}"]`)].pop();
+      if (nw) { const r = nw.getBoundingClientRect(), cb = innerHeight - (+getComputedStyle(document.documentElement).getPropertyValue('--ctlh').replace('px', '') || 0);
+        if (r.bottom > cb || r.top < 0) nw.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+    }
     if (chrome.chap) chrome.chap.textContent = s.dataset.chapter || '';
     if (chrome.counter) chrome.counter.textContent = `${pad(cur + 1)} / ${pad(slides.length)}`;
     if (chrome.bar) chrome.bar.style.transform = `scaleX(${(cur + 1) / slides.length})`;
@@ -100,6 +136,7 @@
      折行時逐步縮小字級（最多到 82%），量測在頁面顯示時做。 */
   function fitHead(sl) {
     const h = sl.querySelector('.k-head h2'); if (!h) return;
+    if (document.body.classList.contains('k-reflow')) { h.style.fontSize = ''; return; }   // 重排模式允許標題折行
     if (!h.dataset.fs) h.dataset.fs = parseFloat(getComputedStyle(h).fontSize);
     const base = +h.dataset.fs; let fs = base; h.style.fontSize = base + 'px';
     const one = () => h.getBoundingClientRect().height / parseFloat(getComputedStyle(h).lineHeight) < 1.5;

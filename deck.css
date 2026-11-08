@@ -489,3 +489,44 @@ body.ctl-tap #k-ctl{right:62px;left:auto;transform:none}
   #k-bar{transition:none}
 }
 @media print{ #k-start,#k-ctl,#k-sub,#k-end,#k-black{display:none!important} .k-slide [data-s]{opacity:1!important;transform:none!important} }
+
+/* ==========================================================================
+   手機重排模式（2026-11-08）：deck.js 在手機直放（寬 < 700）或矮橫放（觸控且高 < 520）時
+   加上 body.k-reflow＋.k-port／.k-land，舞台改成設計寬度 760／1280 × zoom、可上下捲動。
+   以下規則把 1920×1080 的固定版面改成單欄（直）或雙欄（橫），字級以設計寬度計算。
+   ========================================================================== */
+html.k-reflow-root,html.k-reflow-root body{height:auto;overflow-x:hidden;overflow-y:auto}
+body.k-reflow #k-stage{position:relative;height:auto;overflow:visible;transform:none!important}
+body.k-reflow .k-slide{position:relative;inset:auto;height:auto;min-height:inherit;box-sizing:border-box;
+  padding:30px 34px 190px}
+body.k-reflow.k-land .k-slide{padding:30px 46px 120px}
+body.k-reflow .k-head{padding-right:0;margin-bottom:20px}
+body.k-reflow .k-slide h2{font-size:48px;line-height:1.25}
+body.k-reflow.k-land .k-slide h2{font-size:52px}
+body.k-reflow .k-sub{font-size:27px;line-height:1.45;white-space:normal}
+body.k-reflow .k-nav{position:static;order:-1;max-width:none;flex-wrap:wrap;margin:0 0 16px;justify-content:flex-start}
+body.k-reflow .k-nav button{font-size:22px;padding:6px 16px}
+body.k-reflow .k-body{flex:0 0 auto;min-height:0}
+body.k-reflow .k-body>*{flex:0 0 auto!important;min-height:0}
+body.k-reflow .k-take{font-size:30px;margin-top:22px}
+body.k-reflow .k-cite{font-size:21px;line-height:1.45;margin-top:18px}
+body.k-reflow.k-port .k-g2,body.k-reflow.k-port .k-g3,body.k-reflow.k-port .k-g4,body.k-reflow.k-port .k-g5,
+body.k-reflow.k-port .k-split,body.k-reflow.k-port .k-opts{grid-template-columns:1fr!important}
+body.k-reflow.k-land .k-g4,body.k-reflow.k-land .k-g5{grid-template-columns:repeat(2,1fr)!important}
+body.k-reflow .k-card h3{font-size:32px}
+body.k-reflow .k-card p{font-size:27px}
+body.k-reflow table{font-size:25px}
+body.k-reflow table td,body.k-reflow table th{white-space:normal!important;padding:10px 12px}
+body.k-reflow .k-opt{font-size:28px}
+/* 封面：圖與文字上下排 */
+body.k-reflow .k-cover .k-cover-img{position:static;width:100%;height:auto;order:2}
+body.k-reflow .k-cover-copy,body.k-reflow .k-cover-meta{position:static;width:auto}
+body.k-reflow .k-cover{padding:50px 34px 190px}
+body.k-reflow .k-cover-copy h1{font-size:76px}
+body.k-reflow .k-cover-copy .k-lede{font-size:32px}
+/* 字幕與章節列：固定在螢幕底部；直放時在控制列上方 */
+body.k-reflow #k-chrome{display:none}
+body.k-reflow #k-sub{position:fixed;bottom:calc(var(--ctlh,64px) * var(--rzi,1));height:auto;min-height:0;padding:8px 22px;
+  font-size:30px;line-height:1.35;white-space:normal;text-align:center}
+body.k-reflow.k-land #k-sub{bottom:0}
+body.k-reflow.k-port #k-ctl{position:fixed;top:auto!important;bottom:6px;left:50%;right:auto;transform:translateX(-50%)}

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <title>CGA 認知評估異常的後續處置與建議</title>
 <link rel="stylesheet" href="fonts.css?v=5bea1193">
-<link rel="stylesheet" href="deck.css?v=1a39706c">
+<link rel="stylesheet" href="deck.css?v=e6ac752b">
 <style id="k-neuro">
 /* 神經系統藥理治療學 2026：本案專用樣式（k- 前綴；顏色只寫 hex；組裝時 inline 進 index.html） */
 :root{--ep:#5B3FA0;--ep-wash:#EFEBF8;--st:#C2410C;--st-wash:#FCEDE4;--ha:#B45309;--ha-wash:#FDF3E3;
@@ -211,6 +211,26 @@ table.k-cmp td{padding:16px 20px}
 .k-evi .k-big2{font-size:64px}
 .k-warn p{font-size:30px}
 .k-hb.k-tight .k-ht{height:38px}.k-hb.k-tight{gap:8px}.k-hb.k-tight .k-hv{font-size:30px}.k-hb.k-tight .k-hl{font-size:25px}
+/* 手機重排模式（2026-11-08；deck.js 加 body.k-reflow.k-port／.k-land） */
+body.k-reflow .k-slide.k-chap,body.k-reflow .k-slide.k-ncover{padding:0 0 170px}
+body.k-reflow .k-slide.k-chap.is-active,body.k-reflow .k-slide.k-ncover.is-active{flex-direction:column}
+body.k-reflow .k-chap .k-ch-l,body.k-reflow .k-ncover .k-nc-l{flex:0 0 auto;height:auto;padding:50px 34px 20px}
+body.k-reflow .k-chap .k-ch-no{font-size:96px}
+body.k-reflow .k-chap h2{font-size:64px}
+body.k-reflow .k-chap .k-ch-r{flex:0 0 auto;height:420px}
+body.k-reflow .k-ncover h1{font-size:72px}
+body.k-reflow .k-ncover .k-nc-sub{font-size:32px}
+body.k-reflow .k-ncover .k-nc-meta{margin-top:30px;padding-bottom:10px}
+body.k-reflow .k-ncover .k-nc-r{flex:0 0 auto;height:auto;padding:10px 34px 20px}
+body.k-reflow .k-lit{height:auto!important}
+body.k-reflow .k-lit .k-litbox{flex:0 0 auto}
+body.k-reflow .k-lit .k-litbox img{position:static;display:block;width:100%;height:auto}
+body.k-reflow.k-port .k-syn-row{grid-template-columns:repeat(2,1fr)}
+body.k-reflow .k-kpi .k-kv{font-size:46px}
+body.k-reflow .k-head .k-sub{margin-right:0}
+body.k-reflow.k-land .k-slide.k-chap.is-active{flex-direction:row;align-items:center}
+body.k-reflow.k-land .k-chap .k-ch-l{flex:0 0 58%;padding:40px 30px 20px 46px}
+body.k-reflow.k-land .k-chap .k-ch-r{flex:1 1 auto;height:440px}
 
 /* CGA 專用元件 */
 .k-opts.k-opts2{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:none}
@@ -314,6 +334,32 @@ table.k-table td.k-item{font-size:30px}
 .k-qrsmall p{font-size:24px;margin:0}
 .k-endqr{text-align:center;margin:10px 0}
 .k-endqr p{margin:6px 0 0;font-size:20px}
+/* 手機重排模式：本案元件 */
+body.k-reflow .k-split2,body.k-reflow .k-split2.k-s64{display:flex;flex-direction:column;gap:20px}
+body.k-reflow.k-land .k-split2,body.k-reflow.k-land .k-split2.k-s64{display:grid;grid-template-columns:1fr 1fr}
+body.k-reflow.k-port .k-opts2,body.k-reflow.k-port .k-g5c,body.k-reflow.k-port .k-ad8{grid-template-columns:1fr!important}
+body.k-reflow.k-land .k-g5c{grid-template-columns:repeat(3,1fr)!important}
+body.k-reflow .k-opts2 .k-opt{min-height:0;font-size:28px}
+body.k-reflow .k-opts2 .k-fb{font-size:25px}
+body.k-reflow .k-body>.k-g2 .k-card h3,body.k-reflow .k-body>.k-g3 .k-card h3,body.k-reflow .k-body>.k-g4 .k-card h3,body.k-reflow .k-body>.k-g5c .k-card h3{font-size:32px}
+body.k-reflow .k-body>.k-g2 .k-card p,body.k-reflow .k-body>.k-g3 .k-card p,body.k-reflow .k-body>.k-g4 .k-card p,body.k-reflow .k-body>.k-g5c .k-card p{font-size:27px}
+body.k-reflow.k-port .k-hbr{grid-template-columns:230px 1fr 120px;gap:10px}
+body.k-reflow .k-hbl{font-size:25px}
+body.k-reflow .k-hbv{font-size:30px}
+body.k-reflow .k-zone{flex:0 0 auto}
+body.k-reflow.k-port .k-ptnum{grid-template-columns:1fr 1fr}
+body.k-reflow.k-port .k-ptnum p{grid-column:1 / 3;font-size:28px}
+body.k-reflow .k-ptbar{height:110px}
+body.k-reflow .k-ptbar span{font-size:26px}
+body.k-reflow .k-tier{width:100%!important}
+body.k-reflow .k-tiers{gap:12px}
+body.k-reflow.k-port .k-qrpage{flex-direction:column;gap:30px}
+body.k-reflow .k-qrbig{width:480px;height:480px}
+body.k-reflow .k-refs{column-count:1}
+body.k-reflow.k-land .k-refs{column-count:2}
+body.k-reflow .k-refs p{font-size:22px}
+body.k-reflow .k-tabs button{font-size:24px}
+body.k-reflow .k-hbr{grid-template-columns:minmax(150px,36%) 1fr 110px;gap:10px}
 </style>
 </head>
 <body>
@@ -1563,7 +1609,7 @@ table.k-table td.k-item{font-size:30px}
       <button class="go sage" id="kgo-auto">開始自動播放</button>
     </div>
   </div>
-  <p class="kb">版本 20261106-0ecf｜自動播放中：空白鍵 暫停／繼續｜← → 上一句／下一句｜S 字幕｜M 配樂｜移動滑鼠叫出控制列，「選單」回到這裡</p>
+  <p class="kb">版本 20261108-c836｜自動播放中：空白鍵 暫停／繼續｜← → 上一句／下一句｜S 字幕｜M 配樂｜移動滑鼠叫出控制列，「選單」回到這裡</p>
 </div></div>
 
 <!-- 控制列 -->
@@ -1589,6 +1635,6 @@ table.k-table td.k-item{font-size:30px}
 <audio id="k-voice" preload="auto"></audio>
 <audio id="k-bgm" preload="auto" loop></audio>
 <script src="beats.js?v=ec4dfa9c"></script>
-<script src="deck.js?v=2153d9d1"></script>
+<script src="deck.js?v=57b95d9f"></script>
 </body>
 </html>
