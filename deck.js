@@ -27,14 +27,15 @@
   function fit() {
     const vv = window.visualViewport;
     const w = vv ? vv.width : innerWidth, h = vv ? vv.height : innerHeight;
-    const reflow = w < 700 || (TOUCH && h < 520);
+    // 平板直放（寬 < 900 且直向，如 iPad Mini 768×1024）等比縮小後字只剩 8–11px，也進重排（雙欄）
+    const reflow = w < 700 || (TOUCH && h < 520) || (h > w && w < 900);
     const B = document.body, c0 = document.getElementById('k-ctl');
     B.classList.toggle('k-reflow', reflow);
     document.documentElement.classList.toggle('k-reflow-root', reflow);
     if (reflow) {
-      const land = w > h, dw = land ? RW.land : RW.port;
+      const land = w > h, two = w >= 600, dw = two ? RW.land : RW.port;   // k-land＝雙欄版面（橫放手機、平板直放）；k-port＝單欄
       const z = (land && TOUCH ? w - 44 : w) / dw;
-      B.classList.toggle('k-land', land); B.classList.toggle('k-port', !land);
+      B.classList.toggle('k-land', two); B.classList.toggle('k-port', !two);
       stage.style.transform = 'none'; stage.style.width = dw + 'px'; stage.style.zoom = z;
       stage.style.minHeight = (h / z) + 'px';
       document.documentElement.style.setProperty('--rzi', 1 / z);
