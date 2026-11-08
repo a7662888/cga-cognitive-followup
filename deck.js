@@ -47,9 +47,12 @@
         setH();
         if (!fit.ro && window.ResizeObserver) { fit.ro = new ResizeObserver(setH); fit.ro.observe(c0); }
       }
+      labelTables();
+      floorFonts(z);
       return;
     }
     B.classList.remove('k-land', 'k-port');
+    floorFonts(0);
     stage.style.width = ''; stage.style.zoom = ''; stage.style.minHeight = '';
     let s = Math.min(w / 1920, h / 1080), rsv = 0;
     // 觸控橫放、上下沒空間又左右沒留白（16:9 手機）→ 右側讓出 40px 給 ☰，簡報不被蓋
@@ -62,6 +65,42 @@
     document.body.classList.toggle('ctl-tap', !below && TOUCH);
     const c = document.getElementById('k-ctl');
     if (c) c.style.top = below ? `${(h + 1080 * s) / 2 + 10}px` : '';
+  }
+  /* ---------- 重排模式字級下限（2026-11-08）：手機上任何文字實際字級不低於 12px ----------
+     各頁常有 16–22px 的行內小字（設計寬 760 × zoom 0.47 只剩 8–10px）。逐一寫 CSS 規則補不完，
+     改成進入重排時把「實際字級 < 12px」的文字元素抬到 12px／zoom（行高一併放寬）；離開重排時還原。 */
+  /* ---------- 重排模式：寬表格（≥ 4 欄）在直放時改成「每列一張卡」，每格前面加上欄名（2026-11-08） ---------- */
+  function labelTables() {
+    if (labelTables.done) return; labelTables.done = true;
+    document.querySelectorAll('.k-slide table').forEach(t => {
+      const hr = t.querySelector('thead tr') || t.querySelector('tr'); if (!hr) return;
+      const hs = [...hr.children]; if (hs.length < 4) return;
+      t.classList.add('k-rtable'); if (!t.querySelector('thead')) hr.classList.add('k-rhead');
+      t.querySelectorAll('tr').forEach(tr => { if (tr === hr) return; let i = 0;
+        [...tr.children].forEach(td => { const h = hs[i]; i += +td.colSpan || 1;
+          if (h && h.textContent.trim() && !td.querySelector(':scope > .k-rlab')) {
+            const lab = document.createElement('span'); lab.className = 'k-rlab'; lab.innerHTML = h.innerHTML; td.prepend(lab); } }); });
+    });
+  }
+  function floorFonts(z) {
+    if (floorFonts.z === z) return; floorFonts.z = z;
+    document.querySelectorAll('[data-rfs]').forEach(el => {
+      el.style.removeProperty('font-size'); el.style.fontSize = el.dataset.rfs; el.style.lineHeight = el.dataset.rlh; delete el.dataset.rfs; delete el.dataset.rlh; });
+    if (z) slides.forEach(floorSlide);
+  }
+  function floorSlide(sl) {   // 換頁時再補一次（語言鈕、出處等由程式後加的文字）
+    const z = floorFonts.z; if (!z || !sl) return;
+    const min = 12 / z;
+    sl.querySelectorAll('*').forEach(el => {
+      if (el.closest('template,svg,script,style')) return;
+      if (![...el.childNodes].some(c => c.nodeType === 3 && c.textContent.trim())) return;
+      const cs = getComputedStyle(el), fs = parseFloat(cs.fontSize);
+      if (!(fs < min)) return;
+      el.dataset.rfs = el.style.fontSize; el.dataset.rlh = el.style.lineHeight;
+      el.style.setProperty('font-size', min.toFixed(1) + 'px', 'important');   // 蓋過頁面 CSS 的 !important 小字
+      const lh = parseFloat(cs.lineHeight);
+      if (lh && lh < min * 1.3) el.style.lineHeight = '1.35';
+    });
   }
   const refit = () => { fit(); try { slides[cur] && fitHead(slides[cur]); } catch (e) { /* cur 尚未宣告（載入初期） */ } };
   addEventListener('resize', refit);
@@ -110,6 +149,7 @@
     const s = slides[cur];
     if (render.last !== cur && document.body.classList.contains('k-reflow')) scrollTo(0, 0);   // 重排模式換頁回到頁首（主講與自動播放都經過這裡）
     render.last = cur;
+    floorSlide(s);
     fitHead(s);
     s.dataset.step = showAll ? 'all' : step;   // CSS 可用 .k-slide[data-step="2"] 做步數相依的樣式
     s.querySelectorAll('[data-s]').forEach(el => el.classList.toggle('on', showAll || step >= +el.dataset.s));
